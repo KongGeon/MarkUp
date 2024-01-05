@@ -1,7 +1,7 @@
 "use client";
 
 import styled from "styled-components";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import DOMPurify from "dompurify";
 import Prism from "prismjs";
 import "prismjs/themes/prism-tomorrow.css";
@@ -21,7 +21,7 @@ export default function Contents(props) {
   `;
   const Title = styled.h2`
     color: var(--black, #181818);
-    font-family: Gmarket Sans TTF;
+    /* font-family: Gmarket Sans TTF; */
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -47,17 +47,21 @@ export default function Contents(props) {
   const HtmlWrap = styled.div`
     border: 1px solid var(--boarder);
     border-radius: 16px;
-    padding: 16px;
-    min-height: 500px;
+    padding: 12px;
+    height: 650px;
     display: flex;
     align-items: center;
     transition: all 0.7s;
     margin: 0 auto;
     overflow: hidden;
+    background-color: #323232;
   `;
-  const HtmlInner = styled.div`
+  const HtmlInner = styled.iframe`
     width: 100%;
     position: relative;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 8px;
   `;
   const LangTitle = styled.li`
     font-size: 20px;
@@ -74,18 +78,145 @@ export default function Contents(props) {
     color: #fff;
     margin-right: 8px;
     margin-top: 24px;
-    &:hover{
-      background-color: #3559E0;
+    &:hover {
+      background-color: #3559e0;
     }
-  `
-  const componentsHtml = DOMPurify.sanitize(props.contentsHtml);
-  const componentsCss = DOMPurify.sanitize(props.contentsCss);
-
+  `;
+  const componentsHtml = DOMPurify.sanitize(props.contentsHtml); //html
+  const componentsCss = DOMPurify.sanitize(props.contentsCss); //css
   const firstJs = props.contentsJs.toString();
-  const startIndex = firstJs.indexOf('{') + 1; // '{' 다음 위치부터
-  const endIndex = firstJs.lastIndexOf('}'); // '}' 직전까지
+  const startIndex = firstJs.indexOf("{") + 1; // '{' 다음 위치부터
+  const endIndex = firstJs.lastIndexOf("}"); // '}' 직전까지
   const innerData = firstJs.substring(startIndex, endIndex).trim();
-  const componentsJs = DOMPurify.sanitize(innerData);
+  const componentsJs = DOMPurify.sanitize(innerData); //js
+
+  //style reset
+  const resetCss = `
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+}
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+:root {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  cursor: default;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  tab-size: 4;
+}
+html,
+body {
+  height: 100%;
+}
+iframe{
+  border: 0;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+ul,
+ol {
+  list-style: none;
+}
+
+/* 추가 */
+*::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #585e8a4c;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+
+
+/* skip */
+.skip {
+  display: block;
+  height: 1px;
+  width: 1px;
+  margin: 0 -1px -1px 0;
+  padding: 0;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  background-color: #fff;
+}
+.skip:hover,
+.skip:active,
+.skip:focus {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 5px 0;
+  text-indent: 10px;
+  font-weight: bold;
+  font-size: 12px;
+  color: #333;
+  line-height: 1;
+  text-decoration: none !important;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 0 0 1px #000 inset;
+}
+/* 스크롤 */
+
+.s__container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+.s__row {
+  padding: 0 16px;
+}
+
+:root {
+  --black: #181818;
+  --main: #3559E0;
+  --secondary-color: #000000;
+  --border: #E6E8EC;
+  --backgroun: #F5F5F6;
+  --footer-bg: #191919;
+  --footer-text: #fff;
+}
+body {
+  /* font-family: "Noto Sans KR", "Helvetica Neue", Helvetica, Arial, sans-serif; */
+  font-family: "Pretendard", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: var(--black);
+}
+  `;
 
   const data = [
     {
@@ -99,18 +230,53 @@ export default function Contents(props) {
       description: "1",
     },
   ];
+
+  const iframeRef = useRef();
+
   useEffect(() => {
-    Prism.highlightAll();
+    Prism.highlightAll(); //코드박스 생성
+
+    // iframe 생성
+    // iframe의 document에 접근하여 HTML, CSS, JS를 넣습니다.
+    const encodeHTML = (str) => {
+      if(str !== undefined && str !== null && str !== '') {
+        str = String(str);
+
+        str = str.replace(/<script[^>]*>([\S\s]*?)<\/script>/gmi, '');
+        str = str.replace(/<\/?\w(?:[^"'>]|"[^"]*"|'[^']*')*>/gmi, '');
+        var element = document.createElement('div');
+        element.innerHTML = str;
+        str = element.textContent;
+        element.textContent = '';
+    }
+
+    return str;
+    };
+
+    if (iframeRef.current) {
+      const iframeDocument = iframeRef.current.contentDocument;
+      iframeDocument.open();
+      iframeDocument.write(componentsHtml); //html
+      iframeDocument.close();
+
+      const styleElement = iframeDocument.createElement("style");
+      styleElement.innerHTML = resetCss + componentsCss;
+      iframeDocument.head.appendChild(styleElement); //css
+
+      const scriptElement = iframeDocument.createElement("script");
+      scriptElement.innerHTML = encodeHTML(componentsJs); //js
+      iframeDocument.body.appendChild(scriptElement);
+    }
   }, [index]);
 
   return (
     <Body>
       <Title>{props.name}</Title>
       <TabWrap>
-        {data.map((item) => (
+        {data.map((item, innerIndex) => (
           <Tab
             href="#"
-            key={item.id}
+            key={innerIndex}
             style={{
               color: index === item.id ? "var(--black)" : "var(--gray)",
               borderBottom:
@@ -126,21 +292,19 @@ export default function Contents(props) {
       </TabWrap>
       {data
         .filter((item) => index === item.id)
-        .map((item, index) =>
+        .map((item, innerIndex) =>
           item.id === 0 ? (
-            <HtmlWrap key={index} className="components-html-wrap">
-              <HtmlInner
-                dangerouslySetInnerHTML={{ __html: componentsHtml }}
-              ></HtmlInner>
+            <HtmlWrap key={innerIndex} className="components-html-wrap">
+              <HtmlInner ref={iframeRef} title="example-iframe"></HtmlInner>
             </HtmlWrap>
           ) : (
-              <div>
-                {props.contentsDownload && (
-                  props.contentsDownload.map((item, index) => (
-                    <DownBtn key={index} href={item.link} download>{item.name} 다운로드</DownBtn>
-                  ))
-                  
-                )} 
+            <div>
+              {props.contentsDownload &&
+                props.contentsDownload.map((item, index) => (
+                  <DownBtn key={index} href={item.link} download>
+                    {item.name} 다운로드
+                  </DownBtn>
+                ))}
               <LangTitle>HTML</LangTitle>
               <div className="Code">
                 <pre className="line-numbers">
@@ -156,8 +320,8 @@ export default function Contents(props) {
               <LangTitle>Javascript</LangTitle>
               <div className="Code">
                 <pre className="line-numbers">
-                    {/* <code className={`language-javascript`} dangerouslySetInnerHTML={{ __html: componentsJs }}></code> */}
-                    <code className={`language-javascript`}>{componentsJs}</code>
+                  {/* <code className={`language-javascript`} dangerouslySetInnerHTML={{ __html: componentsJs }}></code> */}
+                  <code className={`language-javascript`}>{componentsJs}</code>
                 </pre>
               </div>
             </div>
