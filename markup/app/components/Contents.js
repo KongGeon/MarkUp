@@ -21,7 +21,7 @@ export default function Contents(props) {
   `;
   const Title = styled.h2`
     color: var(--black, #181818);
-    /* font-family: Gmarket Sans TTF; */
+    font-family: Gmarket Sans TTF;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
