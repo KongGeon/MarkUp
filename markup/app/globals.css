@@ -71,6 +71,14 @@
     --background: "#F5F5F6";
     --main: "#3559E0";
   }
+  .s__container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .s__row {
+    padding: 0 16px;
+  }
   /* reset */
 
   /* 홈 */
@@ -85,4 +93,31 @@
     display: grid;
     grid-template-columns: 2fr 10fr;
     gap: 16px;
+  }
+  /* prism */
+  div.code-toolbar > .toolbar > .toolbar-item{
+    margin-left: 4px;
+  }
+  div.code-toolbar > .toolbar > .toolbar-item > a, div.code-toolbar > .toolbar > .toolbar-item > button, div.code-toolbar > .toolbar > .toolbar-item > span{
+    padding: 4px 8px !important;
+    cursor: pointer !important;
+    font-size: 14px !important;
+    line-height: 14px !important;
+    height: 26px;
+  }
+  .Code{
+    max-height: 500px;
+    overflow: auto;
+  }
+  /* 디바이스버튼 */
+  .size-pc + .m_container .components-html-wrap {
+    max-width: 2000px;
+  }
+  .size-tablet + .m_container .components-html-wrap {
+    max-width: 900px;
+
+  }
+  .size-mobile + .m_container .components-html-wrap {
+    max-width: 390px;
+
   }

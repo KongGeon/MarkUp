@@ -11,6 +11,7 @@ export default function Sidebar() {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    min-width: 160px;
   `;
   const List = styled.p`
     color: var(--gray);
