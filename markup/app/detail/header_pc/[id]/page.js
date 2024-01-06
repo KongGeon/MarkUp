@@ -4,17 +4,14 @@ import Contents from "@/app/components/Contents";
 import { useEffect, useState } from "react";
 export default function page(props) {
   // 처음켜지면 id의 값이 thisPage의 값으로 지정
-const [thisPage, setThisPage] = useState("");
+  const [thisPage, setThisPage] = useState("1");
 
-// thisPage의 값이 바뀌면 thisCategory 값이 해당 내용으로 지정
+  // thisPage의 값이 바뀌면 thisCategory 값이 해당 내용으로 지정
+  useEffect(() => {
+    setThisPage(props.params.id);
+    console.log("현재페이지", props.params.id);
+  }, [thisPage]); //이상하게 이것 넣으면 처음에 랜더링이 안됨
 
-// useEffect(() => {
-//   setThisPage(props.params.id);
-//   console.log("현재페이지", props.params.id);
-// }, [thisPage]); //이상하게 이것 넣으면 처음에 랜더링이 안됨
-  
-  
-  
   const header01 = {
     html: `
     <header class="s__header">
@@ -129,7 +126,7 @@ const [thisPage, setThisPage] = useState("");
       justify-content: center;
       padding: 8px;
     }
-    .menu-link > li:hover > ul li:last-child a {
+    .pc-menu__step1.menu-on + ul li:last-child a,.menu-link > li:hover > ul li:last-child a {
       padding-bottom: 16px;
     }
     .pc-menu {
@@ -171,30 +168,35 @@ const [thisPage, setThisPage] = useState("");
       }
       let preMenu = document.querySelector(".s__logo"); //pc메뉴의 이전요소
       let nextMenu = document.querySelector(".s__login"); //pc메뉴의 다음요소
-      preMenu&&preMenu.addEventListener("focusin", () => {
-        pcMenuBtn.forEach((e) => {
-          e.classList.remove("menu-on");
+      preMenu &&
+        preMenu.addEventListener("focusin", () => {
+          pcMenuBtn.forEach((e) => {
+            e.classList.remove("menu-on");
+          });
         });
-      });
-      nextMenu&&nextMenu.addEventListener("focusin", () => {
-        pcMenuBtn.forEach((e) => {
-          e.classList.remove("menu-on");
+      nextMenu &&
+        nextMenu.addEventListener("focusin", () => {
+          pcMenuBtn.forEach((e) => {
+            e.classList.remove("menu-on");
+          });
         });
-      });
     },
-    download:[{name:'file01', link:'link01'},{name:'file02', link:'link02'}]
+    download: [
+      { name: "file01", link: "link01" },
+      { name: "file02", link: "link02" },
+    ],
   };
 
-  // useEffect(() => {
-  //   header01&&header01.js();
-  // }, [thisPage]);
-
-
-  
   return (
     <>
       <style>{header01.css}</style>
-      <Contents name="Header(PC)" contentsHtml={header01.html} contentsCss={header01.css} contentsJs={header01.js} contentsDownload = {header01.download}></Contents>
+      <Contents
+        name="Header(PC)"
+        contentsHtml={header01.html}
+        contentsCss={header01.css}
+        contentsJs={header01.js}
+        contentsDownload={header01.download}
+      ></Contents>
     </>
   );
 }
