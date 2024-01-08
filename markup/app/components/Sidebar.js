@@ -11,7 +11,7 @@ export default function Sidebar() {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    min-width: 160px;
+    width: 200px;
   `;
   const List = styled.p`
     color: var(--gray);
@@ -24,6 +24,7 @@ export default function Sidebar() {
   `;
 
   const menuData = [
+    { name: "ReadMe", path: "/detail/read_me" },
     { name: "Header(PC)", path: "/detail/header_pc/0" },
     { name: "Header(Mobile)", path: "/detail/header_mobile/0" },
     { name: "footer", path: "/detail/footer/0" },

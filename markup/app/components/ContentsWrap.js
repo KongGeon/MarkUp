@@ -24,6 +24,7 @@ export default function ContentsWrap(props){
 `;
 const Body = styled.div`
   margin-top: 40px;
+  width: calc(100% - 216px);
 `;
 const TabImgWrap = styled.ul`
 display: flex;

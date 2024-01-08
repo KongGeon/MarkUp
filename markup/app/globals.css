@@ -93,8 +93,7 @@
   .m_row{
     padding: 0 16px;
     position: relative;
-    display: grid;
-    grid-template-columns: 2fr 10fr;
+    display: flex;
     gap: 16px;
   }
   /* prism */

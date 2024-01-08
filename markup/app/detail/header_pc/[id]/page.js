@@ -6,7 +6,7 @@ export default function page(props) {
 
   const data = [
     {
-      title: "Header01",
+      title: "Header_PC01 (PC, Tablet Only)",
       img: "img_header_pc01.svg",
       html: `
       <header class="s__header">
@@ -182,7 +182,7 @@ nextMenu &&
       ],
     },
     {
-      title: "Header02",
+      title: "Header_PC02 (PC, Tablet Only)",
       img: "img_header_pc02.svg",
       html: `
 <header class="s__header">
@@ -373,7 +373,7 @@ lastMenuLink.addEventListener("focusin", () => {
       download: [{ name: "file01", link: "link01" }],
     },
     {
-      title: "Header03",
+      title: "Header_PC03 (PC, Tablet Only)",
       img: "img_header_pc03.svg",
       html: `
 <header class="s__header">
