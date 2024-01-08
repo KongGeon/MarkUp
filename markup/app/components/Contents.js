@@ -2,7 +2,6 @@
 
 import styled from "styled-components";
 import { useState, useEffect, useRef } from "react";
-import { Helmet } from "react-helmet";
 import DOMPurify from "dompurify";
 import Prism from "prismjs";
 import "prismjs/themes/prism-tomorrow.css";
@@ -254,19 +253,23 @@ body {
       iframeDocument.head.appendChild(styleElement);
 
       const scriptElement = iframeDocument.createElement("script");
-      if (props.contentsCssFile) {
+      if (props.contentsCssFile && props.contentsCssFile.length !== 0) {
         //css 파일 첨부되어있을때
-        const link = iframeDocument.createElement("link");
-        link.rel = "stylesheet";
-        link.type = "text/css";
-        link.href = "/" + props.contentsCssFile;
-        iframeDocument.head.appendChild(link);
+        props.contentsCssFile.forEach((e) => {
+          const link = iframeDocument.createElement("link");
+          link.rel = "stylesheet";
+          link.type = "text/css";
+          link.href = "/" + e;
+          iframeDocument.head.appendChild(link);
+        });
       }
-      if (props.contentsJsFile) {
+      if (props.contentsJsFile && props.contentsJsFile.length !== 0) {
         //js 파일 첨부되어있을때
-        const script = iframeDocument.createElement("script");
-        script.src = "/" + props.contentsJsFile;
-        iframeDocument.head.appendChild(script);
+        props.contentsJsFile.forEach((e) => {
+          const script = iframeDocument.createElement("script");
+          script.src = "/" + e;
+          iframeDocument.head.appendChild(script);
+        });
       }
       //style css
       const styleElement2 = iframeDocument.createElement("style");
@@ -304,7 +307,7 @@ body {
         .map((item, innerIndex) =>
           item.id === 0 ? (
             <HtmlWrap key={innerIndex} className="components-html-wrap">
-              <HtmlInner ref={iframeRef} title="example-iframe" ></HtmlInner>
+              <HtmlInner ref={iframeRef} title="example-iframe"></HtmlInner>
             </HtmlWrap>
           ) : (
             <div>

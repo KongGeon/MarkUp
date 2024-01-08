@@ -6,8 +6,8 @@ export default function page(props) {
     {
       title: "Swiper01",
       img: "category/img_swiper01.svg",
-      cssFile: "css/swiper-bundle.min.css",
-      jsFile: "js/swiper-bundle.min.js",
+      cssFile: ["css/swiper-bundle.min.css"],
+      jsFile: ["js/swiper-bundle.min.js"],
       html: `
       <!-- Slider main container -->
       <div class="swiper">
@@ -122,8 +122,8 @@ export default function page(props) {
     {
       title: "Swiper02",
       img: "category/img_swiper02.svg",
-      cssFile: "css/swiper-bundle.min.css",
-      jsFile: "js/swiper-bundle.min.js",
+      cssFile: ["css/swiper-bundle.min.css"],
+      jsFile: ["js/swiper-bundle.min.js"],
       html: `
       <!-- Slider main container -->
       <div class="swiper">
@@ -272,60 +272,64 @@ export default function page(props) {
       `,
       js: () => {
         const progressCircle = document.querySelector(".autoplay-progress svg");
-const progressContent = document.querySelector(".autoplay-progress span");
-const autoPlayBtn = document.querySelector('.autoplay-play-stop')
+        const progressContent = document.querySelector(
+          ".autoplay-progress span"
+        );
+        const autoPlayBtn = document.querySelector(".autoplay-play-stop");
 
-const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    // direction: 'vertical',
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true
-    },
-  
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  
-    // And if we need scrollbar
-    // scrollbar: {
-    //   el: '.swiper-scrollbar',
-  // },
-  on: { //프로그래스바(원형)
-    autoplayTimeLeft(s, time, progress) {
-      progressCircle.style.setProperty("--progress", 1 - progress);
-      progressContent.textContent = `${Math.ceil(time / 1000)}s`;
-    }
-  }
-});
-  
-autoPlayBtn.addEventListener('click', (e) => {
-  const btn = e.currentTarget
-  if (btn.classList.contains('stop')) { //일시정지중일 경우
-    swiper.autoplay.resume();
-    btn.classList.remove('stop')
-  } else { //재생중일경우
-    swiper.autoplay.pause();
-    btn.classList.add('stop')
-  }
+        const swiper = new Swiper(".swiper", {
+          // Optional parameters
+          // direction: 'vertical',
+          loop: true,
+          autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+          },
+          // If we need pagination
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
 
-})
+          // Navigation arrows
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+
+          // And if we need scrollbar
+          // scrollbar: {
+          //   el: '.swiper-scrollbar',
+          // },
+          on: {
+            //프로그래스바(원형)
+            autoplayTimeLeft(s, time, progress) {
+              progressCircle.style.setProperty("--progress", 1 - progress);
+              progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+            },
+          },
+        });
+
+        autoPlayBtn.addEventListener("click", (e) => {
+          const btn = e.currentTarget;
+          if (btn.classList.contains("stop")) {
+            //일시정지중일 경우
+            swiper.autoplay.resume();
+            btn.classList.remove("stop");
+          } else {
+            //재생중일경우
+            swiper.autoplay.pause();
+            btn.classList.add("stop");
+          }
+        });
       },
       download: [{ name: "file01", link: "link01" }],
     },
     {
       title: "Swiper03",
       img: "category/img_swiper03.svg",
-      cssFile: "css/swiper-bundle.min.css",
-      jsFile: "js/swiper-bundle.min.js",
+      cssFile: ["css/swiper-bundle.min.css"],
+      jsFile: ["js/swiper-bundle.min.js"],
       html: `
       <!-- Slider main container -->
       <div class="swiper visual-sec">
@@ -514,65 +518,76 @@ autoPlayBtn.addEventListener('click', (e) => {
       `,
       js: () => {
         const progressLine = document.querySelector(".autoplay-progress svg");
-const progressContent = document.querySelector(".autoplay-progress span");
-const autoPlayBtn = document.querySelector('.autoplay-play-stop')
+        const progressContent = document.querySelector(
+          ".autoplay-progress span"
+        );
+        const autoPlayBtn = document.querySelector(".autoplay-play-stop");
 
-const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    // direction: 'vertical',
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-  },
-    
-    // bullet
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: false,
-      type: "custom",
-      renderCustom: function (swiper, current, total) {
-          return (
-              '<span class="current">' + 0 + (current) + '</span>' + '<span class="total">' + 0 + (total) + '</span>'
-          );
-      }
-  },
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  
-    // And if we need scrollbar
-    // scrollbar: {
-    //   el: '.swiper-scrollbar',
-  // },
-  on: { //프로그래스바(원형)
-    autoplayTimeLeft(s, time, progress) {
-      progressLine.style.setProperty("--progress", 1 - progress)
-  }
-  }
-});
-  
-autoPlayBtn.addEventListener('click', (e) => {
-  const btn = e.currentTarget
-  if (btn.classList.contains('stop')) { //일시정지중일 경우
-    swiper.autoplay.resume();
-    btn.classList.remove('stop')
-  } else { //재생중일경우
-    swiper.autoplay.pause();
-    btn.classList.add('stop')
-  }
+        const swiper = new Swiper(".swiper", {
+          // Optional parameters
+          // direction: 'vertical',
+          loop: true,
+          autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+          },
 
-})
+          // bullet
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: false,
+            type: "custom",
+            renderCustom: function (swiper, current, total) {
+              return (
+                '<span class="current">' +
+                0 +
+                current +
+                "</span>" +
+                '<span class="total">' +
+                0 +
+                total +
+                "</span>"
+              );
+            },
+          },
+          // Navigation arrows
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+
+          // And if we need scrollbar
+          // scrollbar: {
+          //   el: '.swiper-scrollbar',
+          // },
+          on: {
+            //프로그래스바(원형)
+            autoplayTimeLeft(s, time, progress) {
+              progressLine.style.setProperty("--progress", 1 - progress);
+            },
+          },
+        });
+
+        autoPlayBtn.addEventListener("click", (e) => {
+          const btn = e.currentTarget;
+          if (btn.classList.contains("stop")) {
+            //일시정지중일 경우
+            swiper.autoplay.resume();
+            btn.classList.remove("stop");
+          } else {
+            //재생중일경우
+            swiper.autoplay.pause();
+            btn.classList.add("stop");
+          }
+        });
       },
       download: [{ name: "file01", link: "link01" }],
     },
     {
       title: "Swiper04",
       img: "category/img_swiper04.svg",
-      cssFile: "css/swiper-bundle.min.css",
-      jsFile: "js/swiper-bundle.min.js",
+      cssFile: ["css/swiper-bundle.min.css"],
+      jsFile: ["js/swiper-bundle.min.js"],
       html: `
       <div class="swiper">
       <!-- Additional required wrapper -->
@@ -684,20 +699,20 @@ autoPlayBtn.addEventListener('click', (e) => {
 /* swiper 끝 */
       `,
       js: () => {
-        const swiper = new Swiper('.swiper', {
+        const swiper = new Swiper(".swiper", {
           // Optional parameters
           // direction: 'vertical',
           // loop: true,
-        
+
           // If we need pagination
           // pagination: {
           //   el: '.swiper-pagination',
           // },
-        
+
           // Navigation arrows
           navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
           },
           slidesPerView: 5,
           spaceBetween: 30,
@@ -705,21 +720,21 @@ autoPlayBtn.addEventListener('click', (e) => {
           // And if we need scrollbar
           // scrollbar: {
           //   el: '.swiper-scrollbar',
-        // },
-        breakpoints: {
-          360: {
-            slidesPerView: 2,
+          // },
+          breakpoints: {
+            360: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+            1400: {
+              slidesPerView: 4,
+            },
+            1600: {
+              slidesPerView: 5,
+            },
           },
-          1024: {
-            slidesPerView: 3,
-          },
-          1400: {
-            slidesPerView: 4,
-          },
-          1600: {
-            slidesPerView: 5,
-          },
-        },
         });
       },
       download: [{ name: "file01", link: "link01" }],
