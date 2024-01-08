@@ -1,13 +1,12 @@
 "use client";
 
 import ContentsWrap from "@/app/components/ContentsWrap";
-import { useEffect, useState } from "react";
 export default function page(props) {
 
   const data = [
     {
       title: "Header_Mobile01 (Mobile Only)",
-      img: "img_header_mobile01.svg",
+      img: "category/img_header_mobile01.svg",
       html: `
       <header>
       <!-- PC 헤더 위치 -->
@@ -172,7 +171,7 @@ mobileMenuBtn.addEventListener("click", () => {
     },
     {
       title: "Header_Mobile02 (Mobile Only)",
-      img: "img_header_mobile02.svg",
+      img: "category/img_header_mobile02.svg",
       html: `
       <header>
       <!-- PC 헤더 위치 -->

@@ -2,6 +2,7 @@
 
 import styled from "styled-components";
 import { useState, useEffect, useRef } from "react";
+import { Helmet } from "react-helmet";
 import DOMPurify from "dompurify";
 import Prism from "prismjs";
 import "prismjs/themes/prism-tomorrow.css";
@@ -15,18 +16,6 @@ require("prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard"); //복사�
 
 export default function Contents(props) {
   const [index, setIndex] = useState(0);
-
-  const Body = styled.div`
-    margin-top: 40px;
-  `;
-  const Title = styled.h2`
-    color: var(--black, #181818);
-    /* font-family: Gmarket Sans TTF; */
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    margin-bottom: 24px;
-  `;
 
   const TabWrap = styled.div`
     display: flex;
@@ -239,18 +228,18 @@ body {
     // iframe 생성
     // iframe의 document에 접근하여 HTML, CSS, JS를 넣습니다.
     const encodeHTML = (str) => {
-      if(str !== undefined && str !== null && str !== '') {
+      if (str !== undefined && str !== null && str !== "") {
         str = String(str);
 
-        str = str.replace(/<script[^>]*>([\S\s]*?)<\/script>/gmi, '');
-        str = str.replace(/<\/?\w(?:[^"'>]|"[^"]*"|'[^']*')*>/gmi, '');
-        var element = document.createElement('div');
+        str = str.replace(/<script[^>]*>([\S\s]*?)<\/script>/gim, "");
+        str = str.replace(/<\/?\w(?:[^"'>]|"[^"]*"|'[^']*')*>/gim, "");
+        var element = document.createElement("div");
         element.innerHTML = str;
         str = element.textContent;
-        element.textContent = '';
-    }
+        element.textContent = "";
+      }
 
-    return str;
+      return str;
     };
 
     if (iframeRef.current) {
@@ -259,16 +248,37 @@ body {
       iframeDocument.write(componentsHtml); //html
       iframeDocument.close();
 
+      //reset css
       const styleElement = iframeDocument.createElement("style");
       styleElement.innerHTML = resetCss + componentsCss;
-      iframeDocument.head.appendChild(styleElement); //css
+      iframeDocument.head.appendChild(styleElement);
 
       const scriptElement = iframeDocument.createElement("script");
-      scriptElement.innerHTML = encodeHTML(componentsJs); //js
-      iframeDocument.body.appendChild(scriptElement);
+      if (props.contentsCssFile) {
+        //css 파일 첨부되어있을때
+        const link = iframeDocument.createElement("link");
+        link.rel = "stylesheet";
+        link.type = "text/css";
+        link.href = "/" + props.contentsCssFile;
+        iframeDocument.head.appendChild(link);
+      }
+      if (props.contentsJsFile) {
+        //js 파일 첨부되어있을때
+        const script = iframeDocument.createElement("script");
+        script.src = "/" + props.contentsJsFile;
+        iframeDocument.head.appendChild(script);
+      }
+      //style css
+      const styleElement2 = iframeDocument.createElement("style");
+      styleElement2.innerHTML = componentsCss;
+      iframeDocument.head.appendChild(styleElement2);
+
+      setTimeout(() => {
+        scriptElement.innerHTML = encodeHTML(componentsJs); //js
+        iframeDocument.body.appendChild(scriptElement);
+      }, 100);
     }
   }, [index]);
-
   return (
     <>
       <TabWrap>
@@ -294,7 +304,7 @@ body {
         .map((item, innerIndex) =>
           item.id === 0 ? (
             <HtmlWrap key={innerIndex} className="components-html-wrap">
-              <HtmlInner ref={iframeRef} title="example-iframe"></HtmlInner>
+              <HtmlInner ref={iframeRef} title="example-iframe" ></HtmlInner>
             </HtmlWrap>
           ) : (
             <div>

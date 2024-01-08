@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 
 export default function ContentsWrap(props){
   // 처음켜지면 id의 값이 thisPage의 값으로 지정
-  const [thisPage, setThisPage] = useState("1");
+  const [thisPage, setThisPage] = useState("0");
       // thisPage의 값이 바뀌면 thisCategory 값이 해당 내용으로 지정
   useEffect(() => {
     setThisPage(props.props.params.id);
@@ -45,7 +45,9 @@ return (
         ))}
       </TabImgWrap>
       <Title>{props.data[thisPage].title}</Title>
-      <Contents
+    <Contents
+        contentsCssFile={props.data[thisPage].cssFile}
+        contentsJsFile={props.data[thisPage].jsFile}
         contentsHtml={props.data[thisPage].html}
         contentsCss={props.data[thisPage].css}
         contentsJs={props.data[thisPage].js}

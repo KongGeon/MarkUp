@@ -1,13 +1,12 @@
 "use client";
 
 import ContentsWrap from "@/app/components/ContentsWrap";
-import { useEffect, useState } from "react";
 export default function page(props) {
 
   const data = [
     {
       title: "Header_PC01 (PC, Tablet Only)",
-      img: "img_header_pc01.svg",
+      img: "category/img_header_pc01.svg",
       html: `
       <header class="s__header">
       <div class="s__container pc-menu">
@@ -183,7 +182,7 @@ nextMenu &&
     },
     {
       title: "Header_PC02 (PC, Tablet Only)",
-      img: "img_header_pc02.svg",
+      img: "category/img_header_pc02.svg",
       html: `
 <header class="s__header">
     <div class="s__pc-header-wrap">
@@ -374,7 +373,7 @@ lastMenuLink.addEventListener("focusin", () => {
     },
     {
       title: "Header_PC03 (PC, Tablet Only)",
-      img: "img_header_pc03.svg",
+      img: "category/img_header_pc03.svg",
       html: `
 <header class="s__header">
   <div class="s__container pc-menu">
