@@ -41,7 +41,7 @@ export default function Header() {
       <Container>
         <Row>
           <Link href="/">
-            <img src="/img_logo.svg" alt="마크업로고" title="마크업로고" />
+            <img src="/img_logo.svg" alt="홈" title="홈" />
           </Link>
           <DeviceBtns>
             <DeviceBtn onClick={()=>setSize('size-mobile')}>

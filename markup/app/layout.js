@@ -20,6 +20,9 @@ export default function RootLayout({ children }) {
             {children}
           </div>
         </div>
+        <footer>
+          <p>Copyright © 2024 SnagGeon Inc. All rights reserved.</p>
+        </footer>
       </body>
     </html>
   );

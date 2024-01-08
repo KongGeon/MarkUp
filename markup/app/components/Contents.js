@@ -270,8 +270,7 @@ body {
   }, [index]);
 
   return (
-    <Body>
-      <Title>{props.name}</Title>
+    <>
       <TabWrap>
         {data.map((item, innerIndex) => (
           <Tab
@@ -327,6 +326,6 @@ body {
             </div>
           )
         )}
-    </Body>
+    </>
   );
 }
