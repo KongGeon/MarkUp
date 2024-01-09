@@ -56,6 +56,8 @@ export default function page(props) {
         width: 100%;
         border-bottom: 1px solid var(--border);
         background-color: #fff;
+        top: 0;
+
       }
       header.s__header .s__row {
         display: flex;
@@ -235,6 +237,8 @@ header.s__header{
   width: 100%;
   border-bottom: 1px solid var(--border);
   background-color: #fff;
+  top: 0;
+
 }
 header.s__header .s__row {
   display: flex;
@@ -458,6 +462,7 @@ header.s__header{
   width: 100%;
   border-bottom: 1px solid var(--border);
   background-color: #fff;
+  top: 0;
 }
 header.s__header .s__row {
   display: flex;

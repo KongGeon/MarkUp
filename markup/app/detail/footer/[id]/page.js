@@ -58,6 +58,7 @@ export default function page(props) {
 footer {
   background-color: var(--footer-bg);
   padding: 36px 0;
+  width: 100%;
 }
 
 footer a, footer p, footer span, footer li {
@@ -195,6 +196,7 @@ footer .s__row {
 footer {
   background-color: var(--footer-bg);
   padding: 36px 0;
+  width: 100%;
 }
 
 footer a,

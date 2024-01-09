@@ -8,7 +8,7 @@ export default function page(props) {
       title: "Header_Mobile01 (Mobile Only)",
       img: "category/img_header_mobile01.svg",
       html: `
-      <header>
+      <header class="s__header">
       <!-- PC 헤더 위치 -->
       <div class="s__container mobile-menu">
           <div class="s__row">
@@ -48,11 +48,12 @@ export default function page(props) {
       `,
       css: `
       /* header */
-      header {
+      header.s__header{
         position: fixed;
         width: 100%;
         border-bottom: 1px solid var(--border);
         background-color: #fff;
+        top: 0;
       }
       header .s__row {
         display: flex;
@@ -173,7 +174,7 @@ mobileMenuBtn.addEventListener("click", () => {
       title: "Header_Mobile02 (Mobile Only)",
       img: "category/img_header_mobile02.svg",
       html: `
-      <header>
+      <header class="s__header">
       <!-- PC 헤더 위치 -->
       <div class="s__container mobile-menu">
           <div class="s__row">
@@ -218,11 +219,12 @@ mobileMenuBtn.addEventListener("click", () => {
       `,
       css: `
       /* header */
-header {
+header.s__header{
   position: fixed;
   width: 100%;
   border-bottom: 1px solid var(--border);
   background-color: #fff;
+  top: 0;
 }
 header .s__row {
   display: flex;

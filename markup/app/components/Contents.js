@@ -107,6 +107,14 @@ html,
 body {
   height: 100%;
 }
+section{
+  width: 100%;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 iframe{
   border: 0;
 }
