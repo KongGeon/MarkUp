@@ -214,7 +214,6 @@ body {
 }
 
 /* input */
-
 .s__input {
   padding: 12px 18px;
   border-radius: 5px;
@@ -233,6 +232,26 @@ input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+/* select */
+.s__select {
+  -webkit-appearance: none; /* for chrome */
+  -moz-appearance: none; /*for firefox*/
+  appearance: none;
+  background: url("/icon_down_arrow.svg") no-repeat 97% 50%/18px auto;
+  background-color: #fff;
+  width: 100%;
+  padding: 12px 18px;
+  border-radius: 5px;
+  border: 1px solid #c2c2c2;
+  font-size: 16px;
+  min-height: 50px;
+  margin: 2px;
+
+}
+.s__select::-ms-expand {
+  display: none; /*for IE10,11*/
 }
   `;
 
