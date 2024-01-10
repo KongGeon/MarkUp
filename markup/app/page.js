@@ -63,6 +63,9 @@ export default function Home() {
       <Title>README</Title>
       <SubTitle>특징</SubTitle>
       <ReadMeListWrap>
+      <ReadMeList>
+          <strong>웹표준, 웹접근성 :</strong> 웹표준과 웹접근성에 맞는 마크업파일을 제공합니다.(a태그의 src는 비워뒀습니다.)
+        </ReadMeList>
         <ReadMeList>
           <strong>빠른 마크업 :</strong> 기초적인 마크업을 빠르게 생성할 수
           있도록 도와줍니다.
@@ -93,12 +96,16 @@ export default function Home() {
       <SubTitle>업데이트 및 기여</SubTitle>
       <ReadMeListWrap>
         <ReadMeList>
-          새로운 코드 제안은 언제든 환영합니다! 업데이트를 원하는 코드를
-          보내주시면 정리해서 작성자 아이디와 함께 업데이트합니다.
+          새로운 코드 제안은 언제든 환영합니다!
+          업데이트를 원하는 완성된 코드를 보내주시면 정리해서 작성자 아이디와 함께 업데이트합니다.
         </ReadMeList>
         <ReadMeList>
-          업데이트 내역 및 외주 문의는 yangsk0526@gmail.com으로 보내주세요.
+          업데이트 내역 및 버그 제보는 yangsk0526@gmail.com으로 보내주세요.😊
         </ReadMeList>
+      </ReadMeListWrap>
+      <SubTitle>기타</SubTitle>
+      <ReadMeListWrap>
+        <ReadMeList>마크업 작업 특성상 본 'MARKUP' 페이지는 반응형으로 제작되지 않았습니다.</ReadMeList>
       </ReadMeListWrap>
       {/* <SubTitle>도움을 주신 분</SubTitle>
       <ReadMeListWrap>

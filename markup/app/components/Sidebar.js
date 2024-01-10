@@ -32,6 +32,8 @@ export default function Sidebar() {
     { name: "board", path: "/detail/board/0" },
     { name: "table", path: "/detail/table/0" },
     { name: "input", path: "/detail/input/0" },
+    { name: "date", path: "/detail/date/0" },
+    { name: "file", path: "/detail/file/0" },
     { name: "radio", path: "/detail/radio/0" },
     { name: "checkbox", path: "/detail/checkbox/0" },
     { name: "textarea", path: "/detail/textarea/0" },

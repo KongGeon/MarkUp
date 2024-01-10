@@ -212,6 +212,28 @@ body {
   font-family: "Pretendard", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: var(--black);
 }
+
+/* input */
+
+.s__input {
+  padding: 12px 18px;
+  border-radius: 5px;
+  border: 1px solid #c2c2c2;
+  font-size: 16px;
+  min-height: 50px;
+  width: 100%;
+  margin: 2px;
+}
+.s__input-small{
+    padding: 6px 14px;
+    font-size: 14px;
+    min-height: 36px;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
   `;
 
   const data = [
@@ -245,7 +267,6 @@ body {
         str = element.textContent;
         element.textContent = "";
       }
-
       return str;
     };
 
@@ -287,7 +308,7 @@ body {
       setTimeout(() => {
         scriptElement.innerHTML = encodeHTML(componentsJs); //js
         iframeDocument.body.appendChild(scriptElement);
-      }, 100);
+      }, 1000);
     }
   }, [index]);
   return (

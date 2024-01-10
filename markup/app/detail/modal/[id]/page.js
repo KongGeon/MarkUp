@@ -715,51 +715,71 @@ export default function page(props) {
           };
 
           //데이터 불러오기 샘플
-          const jsonData = `{
-    "data": [
-      {
-        "id": "data01",
-        "img": "http://www.aica-gj.kr/file/popup/1693184334.png",
-        "link": "https://www.naver.com/",
-        "title":"공지1"
-      },
-      {
-        "id": "data02",
-        "img": "http://www.aica-gj.kr/file/popup/1692259708.jpg",
-        "link": "https://www.naver.com/",
-        "title":"공지2"
-      },
-      {
-        "id": "data03",
-        "img": "http://www.aica-gj.kr/file/popup/1700206182.jpg",
-        "link": "https://www.naver.com/",
-        "title":"공지3"
-      }
-    ]
-  }`;
-
-          const data = JSON.parse(jsonData);
+          const data = [
+            {
+              id: "data01",
+              img: "http://www.aica-gj.kr/file/popup/1693184334.png",
+              link: "https://www.naver.com/",
+              title: "공지1",
+            },
+            {
+              id: "data02",
+              img: "http://www.aica-gj.kr/file/popup/1692259708.jpg",
+              link: "https://www.naver.com/",
+              title: "공지2",
+            },
+            {
+              id: "data03",
+              img: "http://www.aica-gj.kr/file/popup/1700206182.jpg",
+              link: "https://www.naver.com/",
+              title: "공지3",
+            },
+          ];
           let popupList = "";
           let popupNum = 0;
-          for (let i = 0; i < data.data.length; i++) {
+
+          for (let i = 0; i < data.length; i++) {
             //광고팝업 슬라이드 데이터 노출
-            const d = data.data[i];
+            const d = data[i];
             const thisData = handleStorage.getStorage(d.id);
             if (!thisData) {
-              popupList +=
-                '<div class="swiper-slide swiper-slide swiper-slide01">';
-              popupList +=
-                '<a href=" d.link' +
-                '"><img src="' +
-                d.img +
-                '" alt="' +
-                d.title +
-                '"></a>';
-              popupList += '<div class="popup_slider-btn-wrap">';
-              popupList +=
-                '<button id="' + d.id + '">오늘 하루 보지 않기</button>';
-              popupList += "</div>";
-              popupList += "</div>";
+              const swiperSlide = document.createElement("div");
+              swiperSlide.className =
+                "swiper-slide swiper-slide01";
+
+              // a 태그 생성
+              const link = document.createElement("a");
+              link.href = d.link;
+
+              // img 태그 생성
+              const img = document.createElement("img");
+              img.src = d.img;
+              img.alt = d.title;
+
+              // div.popup_slider-btn-wrap 생성
+              const btnWrap = document.createElement("div");
+              btnWrap.className = "popup_slider-btn-wrap";
+
+              // button 생성
+              const button = document.createElement("button");
+              button.id = d.id;
+              button.textContent = "오늘 하루 보지 않기";
+
+              // 각각의 요소를 조립
+              btnWrap.appendChild(button);
+              link.appendChild(img);
+              swiperSlide.appendChild(link);
+              swiperSlide.appendChild(btnWrap);
+
+              // 스트링으로 변환
+              const tempContainer = document.createElement("div");
+              tempContainer.appendChild(swiperSlide);
+
+              // HTML 문자열로 변환
+              const newPopupItem = tempContainer.innerHTML;
+
+              // popupList에 추가
+              popupList += newPopupItem;
               popupNum += 1;
             }
           }
@@ -813,9 +833,9 @@ export default function page(props) {
           }
         }
 
-        document.addEventListener("DOMContentLoaded", function () {
+        // document.addEventListener("DOMContentLoaded", function () { //화면로드 후 적용하려면 사용
           toggleMainPopup();
-        });
+        // });
       },
       download: [{ name: "file01", link: "link01" }],
     },
