@@ -24,6 +24,7 @@ export default function ContentsWrap(props) {
     display: flex;
     gap: 12px;
     margin-bottom: 24px;
+    height: 62px;
   `;
 
   return (

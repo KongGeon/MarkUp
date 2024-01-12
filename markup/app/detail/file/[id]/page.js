@@ -9,33 +9,21 @@ export default function page(props) {
       jsFile: [],
       img: "category/img_file01.svg",
       html: `
-<div class="s__container">
-  <div class="s__row">
-  <div class="s__file-wrap s__singlefile-wrap">
-  <div class="s__file-btn">
-      <input type="file" class="s__file" id="btnFile" hidden>
-      <label for="btnFile" class="s__btn">업로드</label>
+<section>
+  <div class="s__container">
+    <div class="s__row">
+    <div class="s__file-wrap s__singlefile-wrap">
+      <div class="s__file-btn">
+          <input type="file" class="s__file" id="btnFile" hidden>
+          <label for="btnFile" class="s__btn s__btn-line">업로드</label>
+      </div>
+      <div class="s__singlefile-list"></div>
+    </div>
+    </div>
   </div>
-  <div class="s__singlefile-list">
-
-  </div>
-</div>
-  </div>
-</div>
+</section>
       `,
       css: `
-/* 파일 버튼 */
-.s__file-wrap .s__btn {
-  padding: 8px 16px;
-  font-size: 16px;
-  border: 1px solid var(--main);
-  color: var(--main);
-  border-radius: 4px;
-  display: inline-block;
-  cursor: pointer;
-  width: 80px;
-  text-align: center;
-}
 /* 싱글파일 */
 .s__singlefile-wrap {
   display: flex;
@@ -53,7 +41,7 @@ export default function page(props) {
   padding: 8px 16px;
   margin-left: 8px;
   width: 100%;
-  height: 42px;
+  height: 40px;
   border-radius: 4px;
   border: 1px solid var(--border);
 }
@@ -95,33 +83,23 @@ export default function page(props) {
       jsFile: [],
       img: "category/img_file02.svg",
       html: `
-<div class="s__container">
-  <div class="s__row">
-  <div class="s__file-wrap">
-  <div class="s__file-btn">
-      <input type="file" class="s__multi-file" multiple id="what_file" hidden>
-      <label for="what_file" class="s__btn">업로드</label>
+<section>
+  <div class="s__container">
+    <div class="s__row">
+      <div class="s__file-wrap">
+        <div class="s__file-btn">
+            <input type="file" class="s__multi-file" multiple id="what_file" hidden>
+            <label for="what_file" class="s__btn s__btn-line">업로드</label>
+        </div>
+        <div class="s__file-list-wrap">
+            <ul class="s__file-list" id="whatList"></ul>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="s__file-list-wrap">
-      <ul class="s__file-list" id="whatList"></ul>
-  </div>
-</div>
-  </div>
-</div>
+</section>
       `,
       css: `
-/* 파일 버튼 */
-.s__file-wrap .s__btn {
-  padding: 8px 16px;
-  font-size: 16px;
-  border: 1px solid var(--main);
-  color: var(--main);
-  border-radius: 4px;
-  display: inline-block;
-  cursor: pointer;
-  width: 80px;
-  text-align: center;
-}
 /* 멀터파일 */
 .s__file-list {
   display: flex;
@@ -248,7 +226,7 @@ export default function page(props) {
                   // 대상 요소에 li 추가
                   fileDiv.appendChild(listItem);
 
-                  fileList += fileDiv.innerHTML
+                  fileList += fileDiv.innerHTML;
                   fileDiv.innerHTML = "";
                 }
 
@@ -282,7 +260,7 @@ export default function page(props) {
                       ).files = dataTransfer.files;
                       console.log(e.querySelector("#" + targetFile));
                       console.log(targetFile);
-                      if (e.querySelector("#" + targetFile)){
+                      if (e.querySelector("#" + targetFile)) {
                         e.querySelector("#" + targetFile).remove();
                       }
 

@@ -9,43 +9,34 @@ export default function page(props) {
       cssFile: ["css/swiper-bundle.min.css"],
       jsFile: ["js/swiper-bundle.min.js"],
       html: `
-      <!-- Slider main container -->
-      <div class="swiper">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide swiper-slide01">
-                  <div class="s__container">
-                      <div class="s__row">
-                          Slide 1
-                      </div>
-                  </div>
-              </div>
-              <div class="swiper-slide swiper-slide02">
-                  <div class="s__container">
-                      <div class="s__row">
-                          Slide 2
-                      </div>
-                  </div>
-              </div>
-              <div class="swiper-slide swiper-slide03">
-                  <div class="s__container">
-                      <div class="s__row">
-                          Slide 3
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <!-- If we need pagination -->
-          <div class="swiper-pagination"></div>
-  
-          <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-  
-          <!-- If we need scrollbar -->
-          <!-- <div class="swiper-scrollbar"></div> -->
-      </div>
+<div class="swiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide swiper-slide01">
+            <div class="s__container">
+                <div class="s__row">
+                    Slide 1
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide swiper-slide02">
+            <div class="s__container">
+                <div class="s__row">
+                    Slide 2
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide swiper-slide03">
+            <div class="s__container">
+                <div class="s__row">
+                    Slide 3
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</div>
       `,
       css: `
       /* swiper */
@@ -125,51 +116,44 @@ export default function page(props) {
       cssFile: ["css/swiper-bundle.min.css"],
       jsFile: ["js/swiper-bundle.min.js"],
       html: `
-      <!-- Slider main container -->
-      <div class="swiper">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide swiper-slide01">
-                  <div class="s__container">
-                      <div class="s__row">
-                          Slide 1
-                      </div>
-                  </div>
-              </div>
-              <div class="swiper-slide swiper-slide02">
-                  <div class="s__container">
-                      <div class="s__row">
-                          Slide 2
-                      </div>
-                  </div>
-              </div>
-              <div class="swiper-slide swiper-slide03">
-                  <div class="s__container">
-                      <div class="s__row">
-                          Slide 3
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <!-- If we need pagination -->
-          <div class="swiper-pagination"></div>
-  
-          <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-  
-          <div class="autoplay-progress">
-              <svg viewBox="0 0 48 48">
-                  <circle cx="24" cy="24" r="20"></circle>
-              </svg>
-              <span></span>
-          </div>
-          <a href="javascript:void(0)" class="autoplay-play-stop">
-              <img src="/icon_play_w.svg" alt="재생" class="autoplay-play">
-              <img src="/icon_play_stop_w.svg" alt="일시정지" class="autoplay-stop">
-          </a>
-      </div>
+<div class="swiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide swiper-slide01">
+            <div class="s__container">
+                <div class="s__row">
+                    Slide 1
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide swiper-slide02">
+            <div class="s__container">
+                <div class="s__row">
+                    Slide 2
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide swiper-slide03">
+            <div class="s__container">
+                <div class="s__row">
+                    Slide 3
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    <div class="autoplay-progress">
+        <svg viewBox="0 0 48 48">
+            <circle cx="24" cy="24" r="20"></circle>
+        </svg>
+        <span></span>
+    </div>
+    <a href="javascript:void(0)" class="autoplay-play-stop">
+        <img src="/icon_play_w.svg" alt="재생" class="autoplay-play">
+        <img src="/icon_play_stop_w.svg" alt="일시정지" class="autoplay-stop">
+    </a>
+</div>
       `,
       css: `
       /* swiper */
@@ -209,6 +193,7 @@ export default function page(props) {
         background-size: contain;
       }
       .autoplay-play-stop{
+        cursor: pointer;
         position: absolute;
         bottom: 4px;
         z-index: 10;
@@ -331,52 +316,49 @@ export default function page(props) {
       cssFile: ["css/swiper-bundle.min.css"],
       jsFile: ["js/swiper-bundle.min.js"],
       html: `
-      <!-- Slider main container -->
-      <div class="swiper visual-sec">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide swiper-slide01">
-                  <div class="s__container">
-                      <div class="s__row">
-                          Slide 1
-                      </div>
-                  </div>
-              </div>
-              <div class="swiper-slide swiper-slide02">
-                  <div class="s__container">
-                      <div class="s__row">
-                          Slide 2
-                      </div>
-                  </div>
-              </div>
-              <div class="swiper-slide swiper-slide03">
-                  <div class="s__container">
-                      <div class="s__row">
-                          Slide 3
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div class="all-box">
-              <div class="progress-box">
-                  <div class="swiper-pagination"></div>
-                  <div class="autoplay-progress">
-                      <svg viewBox="0 0 100 10">
-                          <line x1="0" y1="0" x2="100" y2="0">
-                      </svg>
-                  </div>
-              </div>
-              <div class="arrow-box">
-                  <div class="swiper-button-prev"></div>
-                  <div class="swiper-button-next"></div>
-                  <a href="javascript:void(0)" class="autoplay-play-stop">
-                      <img src="/icon_play_w.svg" alt="재생" class="autoplay-play">
-                      <img src="/icon_play_stop_w.svg" alt="일시정지" class="autoplay-stop">
-                  </a>
-              </div>
-          </div>
-      </div>
+<div class="swiper visual-sec">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide swiper-slide01">
+            <div class="s__container">
+                <div class="s__row">
+                    Slide 1
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide swiper-slide02">
+            <div class="s__container">
+                <div class="s__row">
+                    Slide 2
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide swiper-slide03">
+            <div class="s__container">
+                <div class="s__row">
+                    Slide 3
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="all-box">
+        <div class="progress-box">
+            <div class="swiper-pagination"></div>
+            <div class="autoplay-progress">
+                <svg viewBox="0 0 100 10">
+                    <line x1="0" y1="0" x2="100" y2="0">
+                </svg>
+            </div>
+        </div>
+        <div class="arrow-box">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <a href="javascript:void(0)" class="autoplay-play-stop">
+                <img src="/icon_play_w.svg" alt="재생" class="autoplay-play">
+                <img src="/icon_play_stop_w.svg" alt="일시정지" class="autoplay-stop">
+            </a>
+        </div>
+    </div>
+</div>
       `,
       css: `
       
@@ -417,6 +399,7 @@ export default function page(props) {
   background-size: contain;
 }
 .autoplay-play-stop{
+  cursor: pointer;
     position: absolute;
     right: -33px;
     bottom: 22px;
@@ -538,16 +521,13 @@ export default function page(props) {
             clickable: false,
             type: "custom",
             renderCustom: function (swiper, current, total) {
-              return (
-                '<span class="current">' +
-                0 +
-                current +
-                "</span>" +
-                '<span class="total">' +
-                0 +
-                total +
-                "</span>"
-              );
+              const currentSpan = document.createElement("span");
+              currentSpan.className = "current";
+              currentSpan.textContent = "0" + current;
+              const totalSpan = document.createElement("span");
+              totalSpan.className = "total";
+              totalSpan.textContent = "0" + total;
+              return currentSpan.outerHTML + totalSpan.outerHTML;
             },
           },
           // Navigation arrows
@@ -589,64 +569,63 @@ export default function page(props) {
       cssFile: ["css/swiper-bundle.min.css"],
       jsFile: ["js/swiper-bundle.min.js"],
       html: `
-      <div class="swiper">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide swiper-slide01">
-              <div class="s__container">
-                  <div class="s__row">
-                      Slide 1
-                  </div>
-              </div>
-          </div>
-          <div class="swiper-slide swiper-slide02">
-              <div class="s__container">
-                  <div class="s__row">
-                      Slide 2
-                  </div>
-              </div>
-          </div>
-          <div class="swiper-slide swiper-slide03">
-              <div class="s__container">
-                  <div class="s__row">
-                      Slide 3
-                  </div>
-              </div>
-          </div>
-          <div class="swiper-slide swiper-slide03">
-              <div class="s__container">
-                  <div class="s__row">
-                      Slide 4
-                  </div>
-              </div>
-          </div>
-          <div class="swiper-slide swiper-slide03">
-              <div class="s__container">
-                  <div class="s__row">
-                      Slide 5
-                  </div>
-              </div>
-          </div>
-          <div class="swiper-slide swiper-slide03">
-              <div class="s__container">
-                  <div class="s__row">
-                      Slide 6
-                  </div>
-              </div>
-          </div>
-          <div class="swiper-slide swiper-slide03">
-              <div class="s__container">
-                  <div class="s__row">
-                      Slide 7
-                  </div>
+<section>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide swiper-slide01">
+          <div class="s__container">
+              <div class="s__row">
+                  Slide 1
               </div>
           </div>
       </div>
+      <div class="swiper-slide swiper-slide02">
+          <div class="s__container">
+              <div class="s__row">
+                  Slide 2
+              </div>
+          </div>
+      </div>
+      <div class="swiper-slide swiper-slide03">
+          <div class="s__container">
+              <div class="s__row">
+                  Slide 3
+              </div>
+          </div>
+      </div>
+      <div class="swiper-slide swiper-slide03">
+          <div class="s__container">
+              <div class="s__row">
+                  Slide 4
+              </div>
+          </div>
+      </div>
+      <div class="swiper-slide swiper-slide03">
+          <div class="s__container">
+              <div class="s__row">
+                  Slide 5
+              </div>
+          </div>
+      </div>
+      <div class="swiper-slide swiper-slide03">
+          <div class="s__container">
+              <div class="s__row">
+                  Slide 6
+              </div>
+          </div>
+      </div>
+      <div class="swiper-slide swiper-slide03">
+          <div class="s__container">
+              <div class="s__row">
+                  Slide 7
+              </div>
+          </div>
+      </div>
+    </div>
   </div>
-  <!-- If we need navigation buttons -->
   <div class="swiper-button-prev"></div>
   <div class="swiper-button-next"></div>
+</section>
       `,
       css: `
       /* swiper */

@@ -9,74 +9,35 @@ export default function page(props) {
       jsFile: [],
       img: "category/img_modal01.svg",
       html: `
-      <div class="s__container">
-        <div class="s__row">
-            <button class="js-popup-open" data-popid="popupModal02">기본모달</button>
-            <button class="js-popup-open" data-popid="popupModal03">작은모달</button>
-        </div>
+<section>
+  <div class="s__container">
+    <div class="s__row">
+      <div class="s__btn-center-wrap s__btn-wrap">
+        <button class="s__btn s__btn-line js-popup-open" data-popid="popupModal02">기본모달</button>
+        <button class="s__btn s__btn-line js-popup-open" data-popid="popupModal03">작은모달</button>
+      </div>
     </div>
-    <div id="popupModal02" class="popup__section">
-    <div class="popup__dim"></div>
-    <div class="popup__inner">
+  </div>
+</section>
+<div id="popupModal02" class="popup__section">
+  <div class="popup__dim"></div>
+  <div class="popup__inner">
         <div class="popup__container__group --popup">
-            <div class="popup__header__group">
-                <h2 class="popup__header__title">title</h2>
-                <button class="popup__header__close js-popup-close">
-                    <span class="screen-out">닫기</span>
-                </button>
-            </div>
+          <div class="popup__header__group">
+              <h2 class="popup__header__title">title</h2>
+              <button class="popup__header__close js-popup-close">
+                  <span class="screen-out">닫기</span>
+              </button>
+          </div>
 
-            <div class="popup__contents__group js-popup-scroll ps">
-                <p>내용</p>
-                <p>내용</p>
-                <p>내용</p>
-                <p>내용</p>
-                <p>내용</p>
-                <p>내용</p>
-                <p>내용</p>
-                <p>내용</p>
-                <p>내용</p>
-                <p>내용</p>
-                <p>내용</p>
-                <p>내용</p>
-                <p>내용</p>
-                <p>내용</p>
-                <p>내용</p>
-                <p>내용</p>
-                <p>내용</p>
-                <p>내용</p>
-                <p>내용</p>
-                <p>내용</p>
-                <p>내용</p>
-                <p>내용</p>
-                <p>내용</p>
-                <p>내용</p>
-                <p>내용</p>
-                <p>내용</p>
-                <p>내용</p>
-                <p>내용</p>
-                <p>내용</p>
-                <p>내용</p>
-                <p>내용</p>
-                <p>내용</p>
-                <p>내용</p>
-                <p>내용</p>
-                <p>내용</p>
-                <p>내용</p>
-                <p>내용</p>
-                <p>내용</p>
-                <p>내용</p>
-                <p>내용</p>
-                <p>내용</p>
-                <p>내용</p>
-                <p>내용</p>
-                <p>내용</p>
-            </div>
-            <div class="popup__button__group js-popup-btn">
-                <button class="js-popup-close">닫기</button>
-            </div>
-        </div>
-    </div>
+          <div class="popup__contents__group js-popup-scroll ps">
+              <p>내용입니다.</p>
+          </div>
+          <div class="popup__button__group js-popup-btn">
+              <button class="js-popup-close">닫기</button>
+          </div>
+      </div>
+  </div>
 </div>
 <div id="popupModal03" class="popup__section">
     <div class="popup__dim"></div>
@@ -88,7 +49,6 @@ export default function page(props) {
                     <span class="screen-out">닫기</span>
                 </button>
             </div>
-
             <div class="popup__contents__group js-popup-scroll ps">
                 <p>내용입니다.</p>
             </div>
@@ -303,41 +263,44 @@ export default function page(props) {
       jsFile: [],
       img: "category/img_modal02.svg",
       html: `
-      <div class="s__container">
-        <div class="s__row">
-            <button class="js-popup-open" data-popid="popupModal01">검색모달</button>
-        </div>
+<section>
+  <div class="s__container">
+    <div class="s__row">
+      <div class="s__btn-center-wrap s__btn-wrap">
+        <button class="s__btn s__btn-line js-popup-open" data-popid="popupModal01">검색모달</button>
+      </div>
     </div>
-    <div id="popupModal01" class="popup__section search-popup">
-    <div class="popup__dim"></div>
-    <div class="popup__inner">
-        <div class="popup__container__group --popup">
-            <div class="popup__header__group">
-                <h2 class="popup__header__title"></h2>
-                <button class="popup__header__close js-popup-close">
-                    <span class="screen-out">닫기</span>
-                </button>
-            </div>
-
-            <div class="popup__contents__group js-popup-scroll ps">
-                <div class="top-search-box">
-                    <form>
-                        <div class="top-search">
-                            <input type="text">
-                            <button><img src="/icon_search.svg" alt="검색" title="검색"></button>
-                        </div>
-                        
-                    </form>
-                </div>
-                <div class="top-search-pop">
-                    <p>인기검색어 : </p>
-                    <a href="">aaaaa</a>
-                    <a href="">bbbbb</a>
-                    <a href="">ccccc</a>
-                </div>
-            </div>
-        </div>
-    </div>
+  </div>
+</section>
+<div id="popupModal01" class="popup__section search-popup">
+  <div class="popup__dim"></div>
+  <div class="popup__inner">
+      <div class="popup__container__group --popup">
+          <div class="popup__header__group">
+              <h2 class="popup__header__title"></h2>
+              <button class="popup__header__close js-popup-close">
+                  <span class="screen-out">닫기</span>
+              </button>
+          </div>
+          <div class="popup__contents__group js-popup-scroll ps">
+              <div class="top-search-box">
+                  <form>
+                      <div class="top-search">
+                          <input type="text">
+                          <button><img src="/icon_search.svg" alt="검색" title="검색"></button>
+                      </div>
+                      
+                  </form>
+              </div>
+              <div class="top-search-pop">
+                  <p>인기검색어 : </p>
+                  <a href="">aaaaa</a>
+                  <a href="">bbbbb</a>
+                  <a href="">ccccc</a>
+              </div>
+          </div>
+      </div>
+  </div>
 </div>
       `,
       css: `
@@ -556,127 +519,119 @@ export default function page(props) {
       jsFile: ["js/swiper-bundle.min.js"],
       img: "category/img_modal03.svg",
       html: `
-      <div class="popup-slider active-on">
-      <button class="popup-slider-close-btn"><img src="/icon_close_w.svg" alt="닫기" title="닫기"></button>
-      <!-- Slider main container -->
-      <div class="swiper" id="popupSlider">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-              <!-- Slides -->
-               <!-- <div class="swiper-slide swiper-slide swiper-slide01">
-                  <a href="#"><img src="http://www.aica-gj.kr/file/popup/1693184334.png" alt=""></a>
-                  <div class="popup_slider-btn-wrap">
-                      <button>오늘 하루 보지 않기</button>
-                  </div>
-              </div> -->
-          </div>
+<div class="popup-slider active-on">
+    <button class="popup-slider-close-btn"><img src="/icon_close_w.svg" alt="닫기" title="닫기"></button>
+    <!-- Slider main container -->
+    <div class="swiper" id="popupSlider">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+        </div>
 
-      </div>
-      <div class="swiper-pagination popup-slide-pagination"></div>
-      <div class="swiper-button-prev popup-slide-prev"></div>
-      <div class="swiper-button-next popup-slide-next"></div>
-  </div>
+    </div>
+    <div class="swiper-pagination popup-slide-pagination"></div>
+    <div class="swiper-button-prev popup-slide-prev"></div>
+    <div class="swiper-button-next popup-slide-next"></div>
+</div>
       `,
       css: `
-      .popup-slider.active-on {
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: rgba(0, 0, 0, 0.4);
-        position: fixed;
-        top: 0;
-      }
-      .popup-slider {
-          display: none;
-      }
-      .popup-slider .swiper{
-          width: 60%;
-      }
-      .popup-slider-close-btn{
-          position: absolute;
-          right: 16px;
-          top: 16px;
-      }
-      .popup-slider-close-btn img {
-          width: 48px;
-      }
-      .popup-slider .swiper-slide {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-            max-height: 80vh;
-          overflow: auto;
-      }
-      .popup-slider .swiper-slide img {
-          object-fit: contain;
-      }
-      .popup-slider .swiper-slide .s__container {
-        height: 100%;
-      }
-      .popup-slider .swiper-slide .s__row {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-      }
-      .popup-slider .swiper-button-prev:after,
-      .swiper-button-next:after {
-        content: "";
-        width: 40px;
-        height: 40px;
-      }
-      .popup_slider-btn-wrap{
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin-top: 32px;
-      }
-      .popup_slider-btn-wrap button + button{
-          margin-left: 8px;
-      }
-      .popup_slider-btn-wrap button {
-          padding: 12px 24px;
-          font-weight: 600;
-          border-radius: 32px;
-          background-color: #fff;
-          font-size: 16px;
-      }
-      .popup_slider-btn-wrap button.today-display-none{
-          background-color: #3c3c3c;
-          color: #fff;
-      }
-      .popup-slider .swiper-button-prev:after {
-        background: url(/icon_left_arrow_w.svg) no-repeat;
-        background-size: contain;
-      }
-      .popup-slider .swiper-button-next:after {
-        background: url(/icon_right_arrow_w.svg) no-repeat;
-        background-size: contain;
-      }
-      .popup-slider .swiper-pagination-bullet-active {
-        background-color: #fff;
-      }
-      .popup-slider .swiper-pagination-bullet {
-        width: 80px;
-        border-radius: 0;
-        height: 3px;
-      }
-      
-      /* PC (해상도 1024px)*/
-      @media all and (min-width: 1024px) {
-      }
-      /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
-      @media all and (max-width: 1023px) {
-      }
-      /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
-      @media all and (max-width: 767px) {
-          .popup-slider .swiper{
-              width: 80%;
-          }
-      }
+.popup-slider.active-on {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+}
+.popup-slider {
+    display: none;
+}
+.popup-slider .swiper{
+    width: 60%;
+}
+.popup-slider-close-btn{
+    position: absolute;
+    right: 16px;
+    top: 16px;
+}
+.popup-slider-close-btn img {
+    width: 48px;
+}
+.popup-slider .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+    overflow: auto;
+}
+.popup-slider .swiper-slide img {
+    object-fit: contain;
+}
+.popup-slider .swiper-slide .s__container {
+  height: 100%;
+}
+.popup-slider .swiper-slide .s__row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.popup-slider .swiper-button-prev:after,
+.swiper-button-next:after {
+  content: "";
+  width: 40px;
+  height: 40px;
+}
+.popup_slider-btn-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px;
+}
+.popup_slider-btn-wrap button + button{
+    margin-left: 8px;
+}
+.popup_slider-btn-wrap button {
+    padding: 12px 24px;
+    font-weight: 600;
+    border-radius: 32px;
+    background-color: #fff;
+    font-size: 16px;
+}
+.popup_slider-btn-wrap button.today-display-none{
+    background-color: #3c3c3c;
+    color: #fff;
+}
+.popup-slider .swiper-button-prev:after {
+  background: url(/icon_left_arrow_w.svg) no-repeat;
+  background-size: contain;
+}
+.popup-slider .swiper-button-next:after {
+  background: url(/icon_right_arrow_w.svg) no-repeat;
+  background-size: contain;
+}
+.popup-slider .swiper-pagination-bullet-active {
+  background-color: #fff;
+}
+.popup-slider .swiper-pagination-bullet {
+  width: 80px;
+  border-radius: 0;
+  height: 3px;
+}
+
+/* PC (해상도 1024px)*/
+@media all and (min-width: 1024px) {
+}
+/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+@media all and (max-width: 1023px) {
+}
+/* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+@media all and (max-width: 767px) {
+    .popup-slider .swiper{
+        width: 80%;
+    }
+}
       `,
       js: () => {
         const popupSliderCloseBtn = document.querySelector(
@@ -718,19 +673,19 @@ export default function page(props) {
           const data = [
             {
               id: "data01",
-              img: "http://www.aica-gj.kr/file/popup/1693184334.png",
+              img: "/img_test.png",
               link: "https://www.naver.com/",
               title: "공지1",
             },
             {
               id: "data02",
-              img: "http://www.aica-gj.kr/file/popup/1692259708.jpg",
+              img: "/img_test.png",
               link: "https://www.naver.com/",
               title: "공지2",
             },
             {
               id: "data03",
-              img: "http://www.aica-gj.kr/file/popup/1700206182.jpg",
+              img: "/img_test.png",
               link: "https://www.naver.com/",
               title: "공지3",
             },
@@ -744,8 +699,7 @@ export default function page(props) {
             const thisData = handleStorage.getStorage(d.id);
             if (!thisData) {
               const swiperSlide = document.createElement("div");
-              swiperSlide.className =
-                "swiper-slide swiper-slide01";
+              swiperSlide.className = "swiper-slide swiper-slide01";
 
               // a 태그 생성
               const link = document.createElement("a");
@@ -834,7 +788,7 @@ export default function page(props) {
         }
 
         // document.addEventListener("DOMContentLoaded", function () { //화면로드 후 적용하려면 사용
-          toggleMainPopup();
+        toggleMainPopup();
         // });
       },
       download: [{ name: "file01", link: "link01" }],

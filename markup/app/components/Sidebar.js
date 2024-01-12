@@ -12,6 +12,22 @@ export default function Sidebar() {
     flex-direction: column;
     gap: 16px;
     width: 200px;
+    & li:nth-child(1),
+    & li:nth-child(4) {
+      padding-bottom: 16px;
+      position: relative;
+    }
+    & li:nth-child(1)::after,
+    & li:nth-child(4)::after {
+      content: "";
+      display: block;
+      width: 100px;
+      height: 1px;
+      background-color: var(--boarder);
+      position: absolute;
+      bottom: 0;
+      opacity: 0.5;
+    }
   `;
   const List = styled.p`
     color: var(--gray);
@@ -44,12 +60,19 @@ export default function Sidebar() {
     { name: "tabs", path: "/detail/tabs/0" },
     { name: "chart", path: "/detail/chart/0" },
     { name: "accordion", path: "/detail/accordion/0" },
-    { name: "texteditor", path: "/detail/texteditor/0" },
-    { name: "cordbox", path: "/detail/cordbox/0" },
+    // { name: "texteditor", path: "/detail/texteditor/0" },
+    // { name: "cordbox", path: "/detail/cordbox/0" },
   ];
 
+  // 5번째 요소(index 4)부터 끝까지를 따로 분리
+  const sliceArray = menuData.slice(4);
+  // 분리한 부분을 'name' 속성을 기준으로 오름차순으로 정렬
+  sliceArray.sort((a, b) => a.name.localeCompare(b.name));
+  // 정렬된 부분을 원래 배열에 다시 삽입
+  menuData.splice(4, sliceArray.length, ...sliceArray);
+
   function extractBetweenSlashes(input) {
-    const parts = input.split('/');
+    const parts = input.split("/");
     if (parts.length >= 4) {
       return parts[2];
     } else {
@@ -57,7 +80,7 @@ export default function Sidebar() {
       return null;
     }
   }
-  
+
   return (
     <SidebarList>
       {menuData.map((menu, index) => {
@@ -67,8 +90,15 @@ export default function Sidebar() {
               <List
                 style={{
                   color:
-                    extractBetweenSlashes(menu.path) === extractBetweenSlashes(pathname) ? "var(--black)" : "var(--gray)",
-                  fontWeight: extractBetweenSlashes(menu.path) === extractBetweenSlashes(pathname) ? 600 : 400,
+                    extractBetweenSlashes(menu.path) ===
+                    extractBetweenSlashes(pathname)
+                      ? "var(--black)"
+                      : "var(--gray)",
+                  fontWeight:
+                    extractBetweenSlashes(menu.path) ===
+                    extractBetweenSlashes(pathname)
+                      ? 600
+                      : 400,
                 }}
               >
                 {menu.name}

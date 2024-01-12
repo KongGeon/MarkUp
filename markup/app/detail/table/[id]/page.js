@@ -9,47 +9,49 @@ export default function page(props) {
       jsFile: [],
       img: "category/img_table01.svg",
       html: `
-      <div class="s__container">
-      <div class="s__row">
-      <ul class="s__table01-row">
-      <li class="table-half">
-          <p>소속</p>
-          <div>
-              <p>노크플레이스</p>
-          </div>
-      </li>
-      <li class="table-half">
-          <p>직급</p>
-          <div>
-              <p>개인</p>
-              
-      </div></li>
-      <li class="table-full">
-          <p>자료이용목적</p>
-          <div>
-              <p>
-                  블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라
-              </p>
-          </div>
-      </li>
-      <li class="table-half">
-          <p>팀구분</p>
-          <div>
-              <p>개인</p>
-          </div>
-      </li>
-      <li class="table-half">
-          <p>신청자</p>
-          <div>
-              <p>1명</p>
-          </div>
-      </li>
-  </ul>
-  </div>
-  </div>
+<section>
+    <div class="s__container">
+    <div class="s__row">
+    <ul class="s__table01-row">
+    <li class="table-half">
+        <p>th</p>
+        <div>
+            <p>td</p>
+        </div>
+    </li>
+    <li class="table-half">
+        <p>th</p>
+        <div>
+            <p>td</p>
+            
+    </div></li>
+    <li class="table-full">
+        <p>th</p>
+        <div>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+        </div>
+    </li>
+    <li class="table-half">
+        <p>th</p>
+        <div>
+            <p>td</p>
+        </div>
+    </li>
+    <li class="table-half">
+        <p>th</p>
+        <div>
+            <p>td</p>
+        </div>
+    </li>
+    </ul>
+    </div>
+    </div>
+</section>
       `,
       css: `
-      /* 테이블01 가로형 */
+/* 테이블01 가로형 */
 .s__table01-row {
   border-top: 1px solid var(--main);
   display: flex;
@@ -69,10 +71,14 @@ export default function page(props) {
   align-items: center;
   justify-content: center;
 }
-.s__table01-row > li p {
+.s__table01-row > li > p {
   font-weight: 700;
   white-space: normal;
 }
+.s__table01-row > li > div > p {
+    font-weight: 500;
+    white-space: normal;
+  }
 .s__table01-row > li div {
   padding: 12px 24px;
   width: calc(100% - 150px);
@@ -109,72 +115,74 @@ export default function page(props) {
       jsFile: [],
       img: "category/img_table02.svg",
       html: `
-      <div class="s__container">
-      <div class="s__row">
-      <ul class="s__table01-col custom-table01">
-      <li>
-          <div class="s__th">
-              <p>thththththththththththththththththththththth</p>
-          </div>
-          <div class="s__th">
-              <p>th</p>
-          </div>
-          <div class="s__th">
-              <p>th</p>
-          </div>
-          <div class="s__th">
-              <p>th</p>
-          </div>
-          <div class="s__th">
-              <p>th</p>
-          </div>
-          <div class="s__th">
-              <p>th</p>
-          </div>
-      </li>
-      <li>
-          <div class="s__td">
-              <p>td</p>
-          </div>
-          <div class="s__td">
-              <p>td</p>
-          </div>
-          <div class="s__td">
-              <p>td</p>
-          </div>
-          <div class="s__td">
-              <p>td</p>
-          </div>
-          <div class="s__td">
-              <p>td</p>
-          </div>
-          <div class="s__td">
-              <p>td</p>
-          </div>
-      </li>
-      <li>
-          <div class="s__td">
-              <p>td</p>
-          </div>
-          <div class="s__td">
-              <p>td</p>
-          </div>
-          <div class="s__td">
-              <p>td</p>
-          </div>
-          <div class="s__td">
-              <p>td</p>
-          </div>
-          <div class="s__td">
-              <p>td</p>
-          </div>
-          <div class="s__td">
-              <p>td</p>
-          </div>
-      </li>
-  </ul>
-  </div>
-  </div>
+<section>
+    <div class="s__container">
+        <div class="s__row">
+            <ul class="s__table01-col custom-table01">
+                <li>
+                    <div class="s__th">
+                        <p>thththththththththththththththththththththth</p>
+                    </div>
+                    <div class="s__th">
+                        <p>th</p>
+                    </div>
+                    <div class="s__th">
+                        <p>th</p>
+                    </div>
+                    <div class="s__th">
+                        <p>th</p>
+                    </div>
+                    <div class="s__th">
+                        <p>th</p>
+                    </div>
+                    <div class="s__th">
+                        <p>th</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="s__td">
+                        <p>td</p>
+                    </div>
+                    <div class="s__td">
+                        <p>td</p>
+                    </div>
+                    <div class="s__td">
+                        <p>td</p>
+                    </div>
+                    <div class="s__td">
+                        <p>td</p>
+                    </div>
+                    <div class="s__td">
+                        <p>td</p>
+                    </div>
+                    <div class="s__td">
+                        <p>td</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="s__td">
+                        <p>td</p>
+                    </div>
+                    <div class="s__td">
+                        <p>td</p>
+                    </div>
+                    <div class="s__td">
+                        <p>td</p>
+                    </div>
+                    <div class="s__td">
+                        <p>td</p>
+                    </div>
+                    <div class="s__td">
+                        <p>td</p>
+                    </div>
+                    <div class="s__td">
+                        <p>td</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>    
+</section>
       `,
       css: `
 
@@ -221,45 +229,47 @@ export default function page(props) {
       jsFile: [],
       img: "category/img_table03.svg",
       html: `
-      <div class="s__container">
-      <div class="s__row">
-      <table class="s__table02-col">
-      <caption>타이틀</caption>
-      <colgroup>
-          <col width="100">
-          <col width="*">
-          <col width="100">
-          <col width="100">
-      </colgroup>
-      <thead>
-          <tr>
-              <th>th</th>
-              <th>th</th>
-              <th>th</th>
-              <th>th</th>
-          </tr>
-      </thead>
-      <tbody>
-          <tr>
-              <td rowspan="3">td</td>
-              <td>td</td>
-              <td>td</td>
-              <td>td</td>
-          </tr>
-          <tr>
-              <td>td</td>
-              <td>td</td>
-              <td>td</td>
-          </tr>
-          <tr>
-              <td>td</td>
-              <td>td</td>
-              <td>td</td>
-          </tr>
-      </tbody>
-  </table>
-  </div>
-  </div>
+<section>
+    <div class="s__container">
+        <div class="s__row">
+            <table class="s__table02-col">
+                <caption>타이틀</caption>
+                <colgroup>
+                    <col width="100">
+                    <col width="*">
+                    <col width="100">
+                    <col width="100">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>th</th>
+                        <th>th</th>
+                        <th>th</th>
+                        <th>th</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="3">td</td>
+                        <td>td</td>
+                        <td>td</td>
+                        <td>td</td>
+                    </tr>
+                    <tr>
+                        <td>td</td>
+                        <td>td</td>
+                        <td>td</td>
+                    </tr>
+                    <tr>
+                        <td>td</td>
+                        <td>td</td>
+                        <td>td</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
       `,
       css: `
       /* table */

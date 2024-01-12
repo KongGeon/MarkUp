@@ -9,6 +9,7 @@ export default function page(props) {
       jsFile: [],
       img: "category/img_accordion01.svg",
       html: `
+    <section>
       <div class="s__container">
         <div class="s__row">
             <ul class="s__accordion01-wrap">
@@ -87,12 +88,14 @@ export default function page(props) {
             </ul>
         </div>
     </div>
+</section>
       `,
       css: `
       .s__accordion01-wrap{
         border-top: 1px solid var(--border);
         }
         .s__accordion01-title > a{
+            cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: space-between;

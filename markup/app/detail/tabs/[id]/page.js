@@ -9,116 +9,118 @@ export default function page(props) {
       jsFile: [],
       img: "category/img_tabs01.svg",
       html: `
-      <div class="s__container">
-      <div class="s__row">
-          <div class="s__tab01-wrap">
-              <div class="s__tab01-box active-on" data-tab="tab01">
-                  <a href="javascript:void(0)" class="s__tab01-title">타이틀1</a>
-                  <ul class="s__tab01-contents">
-                      <li>
-                          <a href=""><span>1111111111111111 11111111111111111111111</span><span>2024.01.01</span></a>
-                      </li>
-                      <li>
-                          <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
-                      </li>
-                      <li>
-                          <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
-                      </li>
-                      <li>
-                          <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
-                      </li>
-                      <li>
-                          <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
-                      </li>
-                  </ul>
-                  <a href="" class="s__tab01-more-btn"><img src="/icon_plus.svg" alt="더보기" title="더보기"></a>
-              </div>
-              <div class="s__tab01-box" data-tab="tab01">
-                  <a href="javascript:void(0)" class="s__tab01-title">타이틀1</a>
-                  <ul class="s__tab01-contents">
-                      <li>
-                          <a href=""><span>22222222222222222222222222222222222222</span><span>2024.01.01</span></a>
-                      </li>
-                      <li>
-                          <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
-                      </li>
-                      <li>
-                          <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
-                      </li>
-                      <li>
-                          <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
-                      </li>
-                      <li>
-                          <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
-                      </li>
-                      <li>
-                          <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
-                      </li>
-                      <li>
-                          <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
-                      </li>
-                  </ul>
-                  <a href="" class="s__tab01-more-btn"><img src="/icon_plus.svg" alt="더보기" title="더보기"></a>
-              </div>
-              <div class="s__tab01-box" data-tab="tab01">
-                  <a href="javascript:void(0)" class="s__tab01-title">타이틀1</a>
-                  <ul class="s__tab01-contents">
-                      <li>
-                          <a href=""><span>22222222222222222222222222222222222222</span><span>2024.01.01</span></a>
-                      </li>
-                      <li>
-                          <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
-                      </li>
-                  </ul>
-                  <a href="" class="s__tab01-more-btn"><img src="/icon_plus.svg" alt="더보기" title="더보기"></a>
-              </div>
-          </div>
-          <div class="s__tab01-wrap">
-              <div class="s__tab01-box active-on" data-tab="tab02">
-                  <a href="javascript:void(0)" class="s__tab01-title">타이틀3</a>
-                  <ul class="s__tab01-contents">
-                      <li>
-                          <a href=""><span>333333333333333333333333333</span><span>2024.01.01</span></a>
-                      </li>
-                      <li>
-                          <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
-                      </li>
-                      <li>
-                          <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
-                      </li>
-                      <li>
-                          <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
-                      </li>
-                      <li>
-                          <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
-                      </li>
-                  </ul>
-                  <a href="" class="s__tab01-more-btn"><img src="/icon_plus.svg" alt="더보기" title="더보기"></a>
-              </div>
-              <div class="s__tab01-box" data-tab="tab02">
-                  <a href="javascript:void(0)" class="s__tab01-title">타이틀4</a>
-                  <ul class="s__tab01-contents">
-                      <li>
-                          <a href=""><span>44444444444444444444444444</span><span>2024.01.01</span></a>
-                      </li>
-                      <li>
-                          <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
-                      </li>
-                      <li>
-                          <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
-                      </li>
-                      <li>
-                          <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
-                      </li>
-                      <li>
-                          <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
-                      </li>
-                  </ul>
-                  <a href="" class="s__tab01-more-btn"><img src="/icon_plus.svg" alt="더보기" title="더보기"></a>
-              </div>
-          </div>
-      </div>
-  </div>
+<section>
+    <div class="s__container">
+        <div class="s__row">
+            <div class="s__tab01-wrap">
+                <div class="s__tab01-box active-on" data-tab="tab01">
+                    <a href="javascript:void(0)" class="s__tab01-title">타이틀1</a>
+                    <ul class="s__tab01-contents">
+                        <li>
+                            <a href=""><span>1111111111111111 11111111111111111111111</span><span>2024.01.01</span></a>
+                        </li>
+                        <li>
+                            <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
+                        </li>
+                        <li>
+                            <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
+                        </li>
+                        <li>
+                            <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
+                        </li>
+                        <li>
+                            <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
+                        </li>
+                    </ul>
+                    <a href="" class="s__tab01-more-btn"><img src="/icon_plus.svg" alt="더보기" title="더보기"></a>
+                </div>
+                <div class="s__tab01-box" data-tab="tab01">
+                    <a href="javascript:void(0)" class="s__tab01-title">타이틀1</a>
+                    <ul class="s__tab01-contents">
+                        <li>
+                            <a href=""><span>22222222222222222222222222222222222222</span><span>2024.01.01</span></a>
+                        </li>
+                        <li>
+                            <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
+                        </li>
+                        <li>
+                            <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
+                        </li>
+                        <li>
+                            <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
+                        </li>
+                        <li>
+                            <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
+                        </li>
+                        <li>
+                            <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
+                        </li>
+                        <li>
+                            <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
+                        </li>
+                    </ul>
+                    <a href="" class="s__tab01-more-btn"><img src="/icon_plus.svg" alt="더보기" title="더보기"></a>
+                </div>
+                <div class="s__tab01-box" data-tab="tab01">
+                    <a href="javascript:void(0)" class="s__tab01-title">타이틀1</a>
+                    <ul class="s__tab01-contents">
+                        <li>
+                            <a href=""><span>22222222222222222222222222222222222222</span><span>2024.01.01</span></a>
+                        </li>
+                        <li>
+                            <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
+                        </li>
+                    </ul>
+                    <a href="" class="s__tab01-more-btn"><img src="/icon_plus.svg" alt="더보기" title="더보기"></a>
+                </div>
+            </div>
+            <div class="s__tab01-wrap">
+                <div class="s__tab01-box active-on" data-tab="tab02">
+                    <a href="javascript:void(0)" class="s__tab01-title">타이틀3</a>
+                    <ul class="s__tab01-contents">
+                        <li>
+                            <a href=""><span>333333333333333333333333333</span><span>2024.01.01</span></a>
+                        </li>
+                        <li>
+                            <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
+                        </li>
+                        <li>
+                            <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
+                        </li>
+                        <li>
+                            <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
+                        </li>
+                        <li>
+                            <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
+                        </li>
+                    </ul>
+                    <a href="" class="s__tab01-more-btn"><img src="/icon_plus.svg" alt="더보기" title="더보기"></a>
+                </div>
+                <div class="s__tab01-box" data-tab="tab02">
+                    <a href="javascript:void(0)" class="s__tab01-title">타이틀4</a>
+                    <ul class="s__tab01-contents">
+                        <li>
+                            <a href=""><span>44444444444444444444444444</span><span>2024.01.01</span></a>
+                        </li>
+                        <li>
+                            <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
+                        </li>
+                        <li>
+                            <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
+                        </li>
+                        <li>
+                            <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
+                        </li>
+                        <li>
+                            <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
+                        </li>
+                    </ul>
+                    <a href="" class="s__tab01-more-btn"><img src="/icon_plus.svg" alt="더보기" title="더보기"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
       `,
       css: `
       /* tab */
@@ -133,6 +135,8 @@ export default function page(props) {
           display: block;
       }
       .s__tab01-title{
+          cursor: pointer;
+          text-wrap: nowrap;
           position: absolute;
           top: 0;
           display: flex;
@@ -148,6 +152,7 @@ export default function page(props) {
       .active-on .s__tab01-title{
           font-weight: 600;
           border-bottom: 3px solid var(--main);
+          color: var(--main);
       }
       .s__tab01-box:nth-child(2) .s__tab01-title{
           left: 100px;
@@ -210,32 +215,34 @@ export default function page(props) {
       jsFile: [],
       img: "category/img_tabs02.svg",
       html: `
-      <div class="s__container">
-      <div class="s__row">
-          <div class="s__tab02-wrap">
-              <div class="s__tab02-title-wrap">
-                  <a href="javascript:void(0)" class="s__tab02-title active-on" data-tab="tab01">타이틀1</a>
-                  <a href="javascript:void(0)" class="s__tab02-title" data-tab="tab02">타이틀2</a>
-                  <a href="javascript:void(0)" class="s__tab02-title" data-tab="tab03">타이틀3</a>
-                  <a href="javascript:void(0)" class="s__tab02-title" data-tab="tab04">타이틀4</a>
-              </div>
-              <div class="s__tab02-contents-wrap">
-                  <div id="tab01" class="s__teb-contents active-on">
-                      컨텐츠1
-                  </div>
-                  <div id="tab02" class="s__teb-contents">
-                      컨텐츠2
-                  </div>
-                  <div id="tab03" class="s__teb-contents">
-                      컨텐츠3
-                  </div>
-                  <div id="tab04" class="s__teb-contents">
-                      컨텐츠4
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
+<section>
+    <div class="s__container">
+        <div class="s__row">
+            <div class="s__tab02-wrap">
+                <div class="s__tab02-title-wrap">
+                    <a href="javascript:void(0)" class="s__tab02-title active-on" data-tab="tab01">타이틀1</a>
+                    <a href="javascript:void(0)" class="s__tab02-title" data-tab="tab02">타이틀2</a>
+                    <a href="javascript:void(0)" class="s__tab02-title" data-tab="tab03">타이틀3</a>
+                    <a href="javascript:void(0)" class="s__tab02-title" data-tab="tab04">타이틀4</a>
+                </div>
+                <div class="s__tab02-contents-wrap">
+                    <div id="tab01" class="s__teb-contents active-on">
+                        컨텐츠1
+                    </div>
+                    <div id="tab02" class="s__teb-contents">
+                        컨텐츠2
+                    </div>
+                    <div id="tab03" class="s__teb-contents">
+                        컨텐츠3
+                    </div>
+                    <div id="tab04" class="s__teb-contents">
+                        컨텐츠4
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
       `,
       css: `
       .s__tab02-title-wrap{
@@ -243,8 +250,10 @@ export default function page(props) {
         display: flex;
         align-items: center;
         overflow-x: auto;
+        margin-bottom: 16px;
     }
     .s__tab02-title-wrap .s__tab02-title{
+        cursor: pointer;
         font-size: 18px;
         font-weight: 400;
         padding: 12px 16px;
