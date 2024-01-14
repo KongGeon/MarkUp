@@ -2,185 +2,180 @@
 
 import ContentsWrap from "@/app/components/ContentsWrap";
 export default function page(props) {
-
   const data = [
     {
       title: "Header_PC01 (PC, Tablet Only)",
       img: "category/img_header_pc01.svg",
       html: `
-      <header class="s__header">
-      <div class="s__container pc-menu">
-          <div class="s__row">
-              <a href="#" class="s__logo"><img src="/img_logo.svg" alt="logo" title="홈으로 이동"></a>
-              <ul class="menu-link">
-                  <li>
-                      <a href="#" class="pc-menu__step1">step1</a>
-                      <ul>
-                          <li><a href="#" class="pc-menu__step2">step2</a></li>
-                          <li><a href="#" class="pc-menu__step2">step2</a></li>
-                          <li><a href="#" class="pc-menu__step2">step2</a></li>
-                      </ul>
-                  </li>
-                  <li>
-                      <a href="#" class="pc-menu__step1">step1</a>
-                      <ul>
-                          <li><a href="#" class="pc-menu__step2">step2</a></li>
-                          <li><a href="#" class="pc-menu__step2">step2</a></li>
-                          <li><a href="#" class="pc-menu__step2">step2</a></li>
-                      </ul>
-                  </li>
-                  <li>
-                      <a href="#" class="pc-menu__step1">step1</a>
-                      <ul>
-                          <li><a href="#" class="pc-menu__step2">step2</a></li>
-                          <li><a href="#" class="pc-menu__step2">step2</a></li>
-                          <li><a href="#" class="pc-menu__step2">step2</a></li>
-                          <li><a href="#" class="pc-menu__step2">step2</a></li>
-                          <li><a href="#" class="pc-menu__step2">step2</a></li>
-                      </ul>
-                  </li>
-              </ul>
-              <div class="menu-right">
-                  <a href="#" class="s__login">login</a>
-                  <a href="#">join</a>
-              </div>
+<header class="s__header">
+  <div class="s__container pc-menu">
+      <div class="s__row">
+          <a href="#" class="s__logo"><img src="/icon_logo.svg" alt="logo" title="홈으로 이동"></a>
+          <ul class="menu-link">
+              <li>
+                  <a href="#" class="pc-menu__step1">step1</a>
+                  <ul>
+                      <li><a href="#" class="pc-menu__step2">step2</a></li>
+                      <li><a href="#" class="pc-menu__step2">step2</a></li>
+                      <li><a href="#" class="pc-menu__step2">step2</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="#" class="pc-menu__step1">step1</a>
+                  <ul>
+                      <li><a href="#" class="pc-menu__step2">step2</a></li>
+                      <li><a href="#" class="pc-menu__step2">step2</a></li>
+                      <li><a href="#" class="pc-menu__step2">step2</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="#" class="pc-menu__step1">step1</a>
+                  <ul>
+                      <li><a href="#" class="pc-menu__step2">step2</a></li>
+                      <li><a href="#" class="pc-menu__step2">step2</a></li>
+                      <li><a href="#" class="pc-menu__step2">step2</a></li>
+                      <li><a href="#" class="pc-menu__step2">step2</a></li>
+                      <li><a href="#" class="pc-menu__step2">step2</a></li>
+                  </ul>
+              </li>
+          </ul>
+          <div class="menu-right">
+              <a href="#" class="s__login">login</a>
+              <a href="#">join</a>
           </div>
       </div>
-      <!-- 모바일 헤더 위치 -->
-  </header>
+  </div>
+  <!-- 모바일 헤더 위치 -->
+</header>
       `,
       css: `
-      /* header */
-      header.s__header {
-        position: fixed;
-        width: 100%;
-        border-bottom: 1px solid var(--border);
-        background-color: #fff;
-        top: 0;
+/* header */
+header.s__header {
+  position: fixed;
+  width: 100%;
+  border-bottom: 1px solid var(--border);
+  background-color: #fff;
+  top: 0;
 
-      }
-      header.s__header .s__row {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: nowrap;
-        height: 100%;
-      }
-      .menu-link {
-        display: flex;
-        height: 100%;
-      }
-      .menu-link > li {
-        position: relative;
-        cursor: pointer;
-      }
-      .menu-link ul {
-        display: none;
-        position: absolute;
-        left: 0;
-        right: 0;
-        background-color: #fff;
-        overflow: hidden;
-      }
-      .menu-link > li {
-        height: 100%;
-      }
-      .menu-link a:hover {
-        color: var(--main);
-      }
-      @-webkit-keyframes menuOpen {
-        0% {
-          max-height: 0;
-        }
-        100% {
-          max-height: 1000px;
-        }
-      }
-      
-      .pc-menu__step1 {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0 24px;
-        font-weight: 500;
-      }
-      .pc-menu__step1.menu-on + ul,
-      .menu-link > li:hover > ul {
-        display: block;
-        border: 1px solid var(--border);
-        border-top: 1px solid #fff;
-        animation-name: menuOpen;
-        animation-duration: 2s;
-        border-radius: 0 0 4px 4px;
-      }
-      .pc-menu__step1.menu-on + ul a,
-      .menu-link > li:hover > ul a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 8px;
-      }
-      .pc-menu__step1.menu-on + ul li:last-child a,.menu-link > li:hover > ul li:last-child a {
-        padding-bottom: 16px;
-      }
-      .pc-menu {
-        height: 60px;
-      }
-      .menu-right a + a {
-        margin-left: 24px;
-      }
-      .menu-right a:hover {
-        color: var(--main);
-      }
-      
-      @media (max-width: 1600px) {
-      }
-      @media (max-width: 1366px) {
-      }
-      @media (max-width: 1024px) {
-      }
-      @media (max-width: 768px) {
-        .pc-menu {
-          display: none;
-        }
-      }
-      
+}
+header.s__header .s__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: 100%;
+}
+.menu-link {
+  display: flex;
+  height: 100%;
+}
+.menu-link > li {
+  position: relative;
+  cursor: pointer;
+}
+.menu-link ul {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  overflow: hidden;
+}
+.menu-link > li {
+  height: 100%;
+}
+.menu-link a:hover {
+  color: var(--main);
+}
+@-webkit-keyframes menuOpen {
+  0% {
+    max-height: 0;
+  }
+  100% {
+    max-height: 1000px;
+  }
+}
+
+.pc-menu__step1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+  font-weight: 500;
+}
+.pc-menu__step1.menu-on + ul,
+.menu-link > li:hover > ul {
+  display: block;
+  border: 1px solid var(--border);
+  border-top: 1px solid #fff;
+  animation-name: menuOpen;
+  animation-duration: 2s;
+  border-radius: 0 0 4px 4px;
+}
+.pc-menu__step1.menu-on + ul a,
+.menu-link > li:hover > ul a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+.pc-menu__step1.menu-on + ul li:last-child a,.menu-link > li:hover > ul li:last-child a {
+  padding-bottom: 16px;
+}
+.pc-menu {
+  height: 60px;
+}
+.menu-right a + a {
+  margin-left: 24px;
+}
+.menu-right a:hover {
+  color: var(--main);
+}
+
+@media (max-width: 1600px) {
+}
+@media (max-width: 1366px) {
+}
+@media (max-width: 1024px) {
+}
+@media (max-width: 768px) {
+  .pc-menu {
+    display: none;
+  }
+}
+
   
       `,
       js: () => {
-//pc메뉴
-let pcMenuBtn = document.querySelectorAll(".pc-menu__step1");
+        //pc메뉴
+        let pcMenuBtn = document.querySelectorAll(".pc-menu__step1");
 
-for (let i = 0; i < pcMenuBtn.length; i++) {
-  const p = pcMenuBtn[i];
-  p.addEventListener("focusin", () => {
-    pcMenuBtn.forEach((e) => {
-      e.classList.remove("menu-on");
-    });
-    p.classList.add("menu-on");
-  });
-}
-let preMenu = document.querySelector(".s__logo"); //pc메뉴의 이전요소
-let nextMenu = document.querySelector(".s__login"); //pc메뉴의 다음요소
-preMenu &&
-  preMenu.addEventListener("focusin", () => {
-    pcMenuBtn.forEach((e) => {
-      e.classList.remove("menu-on");
-    });
-  });
-nextMenu &&
-  nextMenu.addEventListener("focusin", () => {
-    pcMenuBtn.forEach((e) => {
-      e.classList.remove("menu-on");
-    });
-  });
-},
-      download: [
-        { name: "file01", link: "link01" },
-        { name: "file02", link: "link02" },
-      ],
+        for (let i = 0; i < pcMenuBtn.length; i++) {
+          const p = pcMenuBtn[i];
+          p.addEventListener("focusin", () => {
+            pcMenuBtn.forEach((e) => {
+              e.classList.remove("menu-on");
+            });
+            p.classList.add("menu-on");
+          });
+        }
+        let preMenu = document.querySelector(".s__logo"); //pc메뉴의 이전요소
+        let nextMenu = document.querySelector(".s__login"); //pc메뉴의 다음요소
+        preMenu &&
+          preMenu.addEventListener("focusin", () => {
+            pcMenuBtn.forEach((e) => {
+              e.classList.remove("menu-on");
+            });
+          });
+        nextMenu &&
+          nextMenu.addEventListener("focusin", () => {
+            pcMenuBtn.forEach((e) => {
+              e.classList.remove("menu-on");
+            });
+          });
+      },
     },
     {
       title: "Header_PC02 (PC, Tablet Only)",
@@ -190,7 +185,7 @@ nextMenu &&
     <div class="s__pc-header-wrap">
         <div class="s__container pc-menu">
             <div class="s__row">
-                <a href="#" class="s__logo"><img src="/img_logo.svg" alt="logo" title="홈으로 이동"></a>
+                <a href="#" class="s__logo"><img src="/icon_logo.svg" alt="logo" title="홈으로 이동"></a>
                 <ul class="menu-link">
                     <li>
                         <a href="#" class="pc-menu__step1">step1</a>
@@ -341,39 +336,39 @@ header.s__header .s__row {
       
       `,
       js: () => {
-      //pc메뉴
-let header = document.querySelector("header");
-let pcMenu = document.querySelector(".s__pc-header-wrap");
-let pcMenuBtn = document.querySelectorAll(".pc-menu__step1");
-let pcMenuBtnList = document.querySelectorAll(".pc-menu__step1 + ul");
-let pcMenuBg = document.querySelector('.pc-menu-bg') 
-let lastMenuLink = document.querySelector('.menu-link > li:last-child li:last-child .pc-menu__step2')
-for (let i = 0; i < pcMenuBtn.length; i++) {
-  const p = pcMenuBtn[i];
-  p.addEventListener("focusin", () => {
-    pcMenu.classList.add("menu-on");
-  });
-  p.addEventListener("mouseover", () => {
-    pcMenu.classList.add("menu-on");
-  });
-}
-header.addEventListener('mouseleave', () => {
-  pcMenu.classList.remove("menu-on");
-  
-})
-let preMenu = document.querySelector(".s__logo"); //pc메뉴의 이전요소
-let nextMenu = document.querySelector(".s__login"); //pc메뉴의 다음요소
-preMenu.addEventListener("focusin", () => {
-  pcMenu.classList.remove("menu-on");
-});
-nextMenu.addEventListener("focusin", () => {
-  pcMenu.classList.remove("menu-on");
-});
-lastMenuLink.addEventListener("focusin", () => {
-  pcMenu.classList.add("menu-on");
-});
+        //pc메뉴
+        let header = document.querySelector("header");
+        let pcMenu = document.querySelector(".s__pc-header-wrap");
+        let pcMenuBtn = document.querySelectorAll(".pc-menu__step1");
+        let pcMenuBtnList = document.querySelectorAll(".pc-menu__step1 + ul");
+        let pcMenuBg = document.querySelector(".pc-menu-bg");
+        let lastMenuLink = document.querySelector(
+          ".menu-link > li:last-child li:last-child .pc-menu__step2"
+        );
+        for (let i = 0; i < pcMenuBtn.length; i++) {
+          const p = pcMenuBtn[i];
+          p.addEventListener("focusin", () => {
+            pcMenu.classList.add("menu-on");
+          });
+          p.addEventListener("mouseover", () => {
+            pcMenu.classList.add("menu-on");
+          });
+        }
+        header.addEventListener("mouseleave", () => {
+          pcMenu.classList.remove("menu-on");
+        });
+        let preMenu = document.querySelector(".s__logo"); //pc메뉴의 이전요소
+        let nextMenu = document.querySelector(".s__login"); //pc메뉴의 다음요소
+        preMenu.addEventListener("focusin", () => {
+          pcMenu.classList.remove("menu-on");
+        });
+        nextMenu.addEventListener("focusin", () => {
+          pcMenu.classList.remove("menu-on");
+        });
+        lastMenuLink.addEventListener("focusin", () => {
+          pcMenu.classList.add("menu-on");
+        });
       },
-      download: [{ name: "file01", link: "link01" }],
     },
     {
       title: "Header_PC03 (PC, Tablet Only)",
@@ -382,7 +377,7 @@ lastMenuLink.addEventListener("focusin", () => {
 <header class="s__header">
   <div class="s__container pc-menu">
       <div class="s__row">
-          <a href="#" class="s__logo"><img src="/img_logo.svg" alt="logo" title="홈으로 이동"></a>
+          <a href="#" class="s__logo"><img src="/icon_logo.svg" alt="logo" title="홈으로 이동"></a>
           <ul class="menu-link">
               <li class="pc-menu__step1">
                   <a href="#">step1(1)</a>
@@ -578,61 +573,63 @@ li.active > .pc-menu__step3 {
 } 
       `,
       js: () => {
-    //pc메뉴
-let pcMenuBtn = document.querySelectorAll(".pc-menu__step1");
-let pcMenuBtnStep2 = document.querySelectorAll(".pc-menu__step2 > ul > li");
-let pcMenuBtnList = document.querySelectorAll(".pc-menu__step1 + ul");
-let preMenu = document.querySelector(".s__logo"); //pc메뉴의 이전요소
-let nextMenu = document.querySelector(".s__login"); //pc메뉴의 다음요소
+        //pc메뉴
+        let pcMenuBtn = document.querySelectorAll(".pc-menu__step1");
+        let pcMenuBtnStep2 = document.querySelectorAll(
+          ".pc-menu__step2 > ul > li"
+        );
+        let pcMenuBtnList = document.querySelectorAll(".pc-menu__step1 + ul");
+        let preMenu = document.querySelector(".s__logo"); //pc메뉴의 이전요소
+        let nextMenu = document.querySelector(".s__login"); //pc메뉴의 다음요소
 
-//스탭1
-for (let i = 0; i < pcMenuBtn.length; i++) {
-  const p = pcMenuBtn[i];
-  p.addEventListener('mouseenter', () => {
-    pcMenuBtn.forEach(e => {
-      e.classList.remove('active');
-    });
-    p.classList.add('active')
-  })
-  p.addEventListener('focusin', () => {
-    pcMenuBtn.forEach(e => {
-      e.classList.remove('active');
-    });
-    p.classList.add('active')
-  })
-  p.addEventListener('mouseleave', () => {
-    pcMenuBtn.forEach(e => {
-      e.classList.remove('active');
-    });
-  })
-}
-preMenu.addEventListener("focusin", () => {
-  pcMenuBtn.forEach((e) => {
-    e.classList.remove("active");
-  });
-});
-nextMenu.addEventListener("focusin", () => {
-  pcMenuBtn.forEach((e) => {
-    e.classList.remove("active");
-  });
-});
+        //스탭1
+        for (let i = 0; i < pcMenuBtn.length; i++) {
+          const p = pcMenuBtn[i];
+          p.addEventListener("mouseenter", () => {
+            pcMenuBtn.forEach((e) => {
+              e.classList.remove("active");
+            });
+            p.classList.add("active");
+          });
+          p.addEventListener("focusin", () => {
+            pcMenuBtn.forEach((e) => {
+              e.classList.remove("active");
+            });
+            p.classList.add("active");
+          });
+          p.addEventListener("mouseleave", () => {
+            pcMenuBtn.forEach((e) => {
+              e.classList.remove("active");
+            });
+          });
+        }
+        preMenu.addEventListener("focusin", () => {
+          pcMenuBtn.forEach((e) => {
+            e.classList.remove("active");
+          });
+        });
+        nextMenu.addEventListener("focusin", () => {
+          pcMenuBtn.forEach((e) => {
+            e.classList.remove("active");
+          });
+        });
 
-// 스탭2
-for (let i = 0; i < pcMenuBtnStep2.length; i++) {
-  const p = pcMenuBtnStep2[i];
-  p.addEventListener('mouseenter', () => {
-    pcMenuBtnStep2.forEach(e => {
-      e.classList.remove('active');
-    });
-    p.classList.add('active')
-  })
-  p.addEventListener('focusin', () => {
-    pcMenuBtnStep2.forEach(e => {
-      e.classList.remove('active');
-    });
-    p.classList.add('active')
-  })
-}
+        // 스탭2
+        for (let i = 0; i < pcMenuBtnStep2.length; i++) {
+          const p = pcMenuBtnStep2[i];
+          p.addEventListener("mouseenter", () => {
+            pcMenuBtnStep2.forEach((e) => {
+              e.classList.remove("active");
+            });
+            p.classList.add("active");
+          });
+          p.addEventListener("focusin", () => {
+            pcMenuBtnStep2.forEach((e) => {
+              e.classList.remove("active");
+            });
+            p.classList.add("active");
+          });
+        }
       },
     },
   ];

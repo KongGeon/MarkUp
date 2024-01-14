@@ -14,61 +14,64 @@ export default function page(props) {
         <div class="s__row">
             <div class="s__tab01-wrap">
                 <div class="s__tab01-box active-on" data-tab="tab01">
-                    <a href="javascript:void(0)" class="s__tab01-title">타이틀1</a>
+                    <a href="javascript:void(0)" class="s__tab01-title">title1</a>
                     <ul class="s__tab01-contents">
                         <li>
-                            <a href=""><span>1111111111111111 11111111111111111111111</span><span>2024.01.01</span></a>
+                            <a href=""><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span><span>2024.01.01</span></a>
                         </li>
                         <li>
-                            <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
+                            <a href=""><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span><span>2024.01.01</span></a>
                         </li>
                         <li>
-                            <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
+                            <a href=""><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span><span>2024.01.01</span></a>
                         </li>
                         <li>
-                            <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
+                            <a href=""><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span><span>2024.01.01</span></a>
                         </li>
                         <li>
-                            <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
+                            <a href=""><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span><span>2024.01.01</span></a>
                         </li>
                     </ul>
                     <a href="" class="s__tab01-more-btn"><img src="/icon_plus.svg" alt="더보기" title="더보기"></a>
                 </div>
                 <div class="s__tab01-box" data-tab="tab01">
-                    <a href="javascript:void(0)" class="s__tab01-title">타이틀1</a>
+                    <a href="javascript:void(0)" class="s__tab01-title">title2</a>
                     <ul class="s__tab01-contents">
                         <li>
-                            <a href=""><span>22222222222222222222222222222222222222</span><span>2024.01.01</span></a>
+                            <a href=""><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span>2024.01.01</span></a>
                         </li>
                         <li>
-                            <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
+                            <a href=""><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span>2024.01.01</span></a>
                         </li>
                         <li>
-                            <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
+                            <a href=""><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span>2024.01.01</span></a>
                         </li>
                         <li>
-                            <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
+                            <a href=""><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span>2024.01.01</span></a>
                         </li>
                         <li>
-                            <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
-                        </li>
-                        <li>
-                            <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
-                        </li>
-                        <li>
-                            <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
+                            <a href=""><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span>2024.01.01</span></a>
                         </li>
                     </ul>
                     <a href="" class="s__tab01-more-btn"><img src="/icon_plus.svg" alt="더보기" title="더보기"></a>
                 </div>
                 <div class="s__tab01-box" data-tab="tab01">
-                    <a href="javascript:void(0)" class="s__tab01-title">타이틀1</a>
+                    <a href="javascript:void(0)" class="s__tab01-title">title3</a>
                     <ul class="s__tab01-contents">
                         <li>
-                            <a href=""><span>22222222222222222222222222222222222222</span><span>2024.01.01</span></a>
+                            <a href=""><span>There are many variations of passages of Lorem Ipsum available</span><span>2024.01.01</span></a>
                         </li>
                         <li>
-                            <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
+                            <a href=""><span>There are many variations of passages of Lorem Ipsum available</span><span>2024.01.01</span></a>
+                        </li>
+                        <li>
+                            <a href=""><span>There are many variations of passages of Lorem Ipsum available</span><span>2024.01.01</span></a>
+                        </li>
+                        <li>
+                            <a href=""><span>There are many variations of passages of Lorem Ipsum available</span><span>2024.01.01</span></a>
+                        </li>
+                        <li>
+                            <a href=""><span>There are many variations of passages of Lorem Ipsum available</span><span>2024.01.01</span></a>
                         </li>
                     </ul>
                     <a href="" class="s__tab01-more-btn"><img src="/icon_plus.svg" alt="더보기" title="더보기"></a>
@@ -76,43 +79,43 @@ export default function page(props) {
             </div>
             <div class="s__tab01-wrap">
                 <div class="s__tab01-box active-on" data-tab="tab02">
-                    <a href="javascript:void(0)" class="s__tab01-title">타이틀3</a>
+                    <a href="javascript:void(0)" class="s__tab01-title">title1</a>
                     <ul class="s__tab01-contents">
                         <li>
-                            <a href=""><span>333333333333333333333333333</span><span>2024.01.01</span></a>
+                        <a href=""><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span><span>2024.01.01</span></a>
                         </li>
                         <li>
-                            <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
+                            <a href=""><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span><span>2024.01.01</span></a>
                         </li>
                         <li>
-                            <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
+                            <a href=""><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span><span>2024.01.01</span></a>
                         </li>
                         <li>
-                            <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
+                            <a href=""><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span><span>2024.01.01</span></a>
                         </li>
                         <li>
-                            <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
+                            <a href=""><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span><span>2024.01.01</span></a>
                         </li>
                     </ul>
                     <a href="" class="s__tab01-more-btn"><img src="/icon_plus.svg" alt="더보기" title="더보기"></a>
                 </div>
                 <div class="s__tab01-box" data-tab="tab02">
-                    <a href="javascript:void(0)" class="s__tab01-title">타이틀4</a>
+                    <a href="javascript:void(0)" class="s__tab01-title">title2</a>
                     <ul class="s__tab01-contents">
                         <li>
-                            <a href=""><span>44444444444444444444444444</span><span>2024.01.01</span></a>
+                        <a href=""><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span>2024.01.01</span></a>
                         </li>
                         <li>
-                            <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
+                            <a href=""><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span>2024.01.01</span></a>
                         </li>
                         <li>
-                            <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
+                            <a href=""><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span>2024.01.01</span></a>
                         </li>
                         <li>
-                            <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
+                            <a href=""><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span>2024.01.01</span></a>
                         </li>
                         <li>
-                            <a href=""><span>제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.</span><span>2024.01.01</span></a>
+                            <a href=""><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span>2024.01.01</span></a>
                         </li>
                     </ul>
                     <a href="" class="s__tab01-more-btn"><img src="/icon_plus.svg" alt="더보기" title="더보기"></a>
@@ -207,7 +210,6 @@ export default function page(props) {
           });
         });
       },
-      download: [{ name: "file01", link: "link01" }],
     },
     {
       title: "Tabs02",
@@ -220,23 +222,23 @@ export default function page(props) {
         <div class="s__row">
             <div class="s__tab02-wrap">
                 <div class="s__tab02-title-wrap">
-                    <a href="javascript:void(0)" class="s__tab02-title active-on" data-tab="tab01">타이틀1</a>
-                    <a href="javascript:void(0)" class="s__tab02-title" data-tab="tab02">타이틀2</a>
-                    <a href="javascript:void(0)" class="s__tab02-title" data-tab="tab03">타이틀3</a>
-                    <a href="javascript:void(0)" class="s__tab02-title" data-tab="tab04">타이틀4</a>
+                    <a href="javascript:void(0)" class="s__tab02-title active-on" data-tab="tab01">title1</a>
+                    <a href="javascript:void(0)" class="s__tab02-title" data-tab="tab02">title2</a>
+                    <a href="javascript:void(0)" class="s__tab02-title" data-tab="tab03">title3</a>
+                    <a href="javascript:void(0)" class="s__tab02-title" data-tab="tab04">title4</a>
                 </div>
                 <div class="s__tab02-contents-wrap">
                     <div id="tab01" class="s__teb-contents active-on">
-                        컨텐츠1
+                        contents1
                     </div>
                     <div id="tab02" class="s__teb-contents">
-                        컨텐츠2
+                    c   ontents2
                     </div>
                     <div id="tab03" class="s__teb-contents">
-                        컨텐츠3
+                    c   ontents3
                     </div>
                     <div id="tab04" class="s__teb-contents">
-                        컨텐츠4
+                        contents4
                     </div>
                 </div>
             </div>
@@ -245,31 +247,31 @@ export default function page(props) {
 </section>
       `,
       css: `
-      .s__tab02-title-wrap{
-        border-bottom: 1px solid var(--border);
-        display: flex;
-        align-items: center;
-        overflow-x: auto;
-        margin-bottom: 16px;
-    }
-    .s__tab02-title-wrap .s__tab02-title{
-        cursor: pointer;
-        font-size: 18px;
-        font-weight: 400;
-        padding: 12px 16px;
-        display: block;
-    }
-    .s__tab02-title-wrap .s__tab02-title.active-on{
-        border-bottom: 2px solid var(--main);
-        color: var(--main);
-        font-weight: 700;
-    }
-    .s__teb-contents {
-         display: none;
-    }
-    .s__teb-contents.active-on{
-        display: block;
-    }
+.s__tab02-title-wrap{
+border-bottom: 1px solid var(--border);
+display: flex;
+align-items: center;
+overflow-x: auto;
+margin-bottom: 16px;
+}
+.s__tab02-title-wrap .s__tab02-title{
+cursor: pointer;
+font-size: 18px;
+font-weight: 400;
+padding: 12px 16px;
+display: block;
+}
+.s__tab02-title-wrap .s__tab02-title.active-on{
+border-bottom: 2px solid var(--main);
+color: var(--main);
+font-weight: 700;
+}
+.s__teb-contents {
+    display: none;
+}
+.s__teb-contents.active-on{
+display: block;
+}
       `,
       js: () => {
         // tab02
@@ -289,7 +291,6 @@ export default function page(props) {
           });
         });
       },
-      download: [{ name: "file01", link: "link01" }],
     },
   ];
 

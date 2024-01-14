@@ -107,7 +107,6 @@ export default function page(props) {
 
       `,
       js: () => {},
-      download: [{ name: "file01", link: "link01" }],
     },
     {
       title: "Table02",
@@ -221,7 +220,6 @@ export default function page(props) {
       }
       `,
       js: () => {},
-      download: [{ name: "file01", link: "link01" }],
     },
     {
       title: "Table03",
@@ -303,7 +301,6 @@ export default function page(props) {
       /* table 끝 */
       `,
       js: () => {},
-      download: [{ name: "file01", link: "link01" }],
     },
   ];
 

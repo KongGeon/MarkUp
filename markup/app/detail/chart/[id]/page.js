@@ -4,7 +4,7 @@ import ContentsWrap from "@/app/components/ContentsWrap";
 export default function page(props) {
   const data = [
     {
-      title: "Chart",
+      title: "Chart01",
       cssFile: [],
       jsFile: ["js/echart.js"],
       img: "category/img_chart01.svg",
@@ -24,8 +24,7 @@ export default function page(props) {
   </div>
 
       `,
-      css: `
-      `,
+      css: ``,
       js: () => {
         // ----------------테스트용 데이터 : 참고만 해주세요----------------
 
@@ -235,7 +234,7 @@ export default function page(props) {
         };
         myChart03.setOption(option03);
       },
-      download: [{ name: "file01", link: "link01" }],
+      download: [{ name: "Chart01", link: "/download/chart01.zip" }],
     },
     {
       title: "Chart02",
@@ -652,7 +651,7 @@ export default function page(props) {
         const ctx03 = document.getElementById("myChart03");
         new Chart(ctx03, config03);
       },
-      download: [{ name: "file01", link: "link01" }],
+      download: [{ name: "Chart02", link: "/download/chart02.zip" }],
     },
   ];
 

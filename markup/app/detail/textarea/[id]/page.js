@@ -35,7 +35,6 @@ export default function page(props) {
 }
       `,
       js: () => {},
-      download: [{ name: "file01", link: "link01" }],
     },
     {
       title: "Textarea02",
@@ -105,7 +104,6 @@ export default function page(props) {
           elem.addEventListener("keyup", handlerTextCount);
         });
       },
-      download: [{ name: "file01", link: "link01" }],
     },
   ];
 

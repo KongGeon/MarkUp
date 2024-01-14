@@ -20,6 +20,7 @@ export default function Contents(props) {
     display: flex;
     align-items: center;
     border-bottom: 1px solid var(--boarder);
+    margin-top: 16px;
     margin-bottom: 16px;
   `;
   const Tab = styled.a`
@@ -169,6 +170,8 @@ ol {
   font-size: 0;
   line-height: 0;
   background-color: #fff;
+  z-index: 9999;
+  position: relative;
 }
 .skip:hover,
 .skip:active,
@@ -204,6 +207,7 @@ ol {
   --main: #3559E0;
   --secondary-color: #000000;
   --border: #E6E8EC;
+  --gray: #BABABA;
   --backgroun: #F5F5F6;
   --footer-bg: #191919;
   --footer-text: #fff;
@@ -216,36 +220,36 @@ body {
 
 /* input */
 .s__input {
-  padding: 12px 18px;
+  padding: 11px 18px;
   border-radius: 5px;
-  border: 1px solid #c2c2c2;
+  border: 1px solid var(--border);
   font-size: 16px;
-  min-height: 50px;
-  width: 100%;
+  min-height: 48px;
   margin: 2px;
 }
 .s__input-small{
-    padding: 6px 14px;
+    padding: 8px 14px;
     font-size: 14px;
-    min-height: 36px;
+    min-height: 40px;
 }
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
+.s__input::placeholder{
+  color: var(--gray);
+}
 /* select */
 .s__select {
   -webkit-appearance: none; /* for chrome */
   -moz-appearance: none; /*for firefox*/
   appearance: none;
-  background: url("/icon_down_arrow.svg") no-repeat 97% 50%/18px auto;
+  background: url("/icon_down_arrow.svg") no-repeat 95% 50%/18px auto;
   background-color: #fff;
-  width: 100%;
-  padding: 12px 18px;
+  padding: 12px 54px 12px 18px;
   border-radius: 5px;
-  border: 1px solid #c2c2c2;
+  border: 1px solid var(--border);
   font-size: 16px;
   min-height: 50px;
   margin: 2px;
@@ -297,7 +301,7 @@ input[type="number"]::-webkit-inner-spin-button {
   background-color: #dc3545;
 }
 .s__btn-line {
-  border: 1px solid var(--black);
+  border: 1px solid var(--border);
 }
 .s__btn:disabled {
   opacity: 0.2;

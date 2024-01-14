@@ -108,7 +108,7 @@ export default function page(props) {
           // },
         });
       },
-      download: [{ name: "file01", link: "link01" }],
+      download: [{ name: "Swiper", link: "/download/swiper.zip" }],
     },
     {
       title: "Swiper02",
@@ -156,104 +156,104 @@ export default function page(props) {
 </div>
       `,
       css: `
-      /* swiper */
-      .swiper {
-        width: 100%;
-        height: 100vh;
-      }
-      .swiper-slide01 {
-        background-color: #a7a7a7;
-      }
-      .swiper-slide02 {
-        background-color: #828282;
-      }
-      .swiper-slide03 {
-        background-color: #5b5b5b;
-      }
-      .swiper-slide .s__container{
-        height: 100%;
-      }
-      .swiper-slide .s__row{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-      }
-      .swiper-button-prev:after, .swiper-button-next:after{
-        content: '';
-        width: 40px;
-        height: 40px;
-      }
-      .swiper-button-prev:after{
-        background: url(/icon_left_arrow_w.svg) no-repeat;
-        background-size: contain;
-      }
-      .swiper-button-next:after{
-        background: url(/icon_right_arrow_w.svg) no-repeat;
-        background-size: contain;
-      }
-      .autoplay-play-stop{
-        cursor: pointer;
-        position: absolute;
-        bottom: 4px;
-        z-index: 10;
-        width: 24px;
-        left: calc(50% + 140px);
-      }
-      .autoplay-play-stop .autoplay-play{
-        display: none;
-      }
-      .autoplay-play-stop.stop .autoplay-play{
-        display: block;
-      }
-      .autoplay-play-stop.stop .autoplay-stop{
-        display: none;
-      }
-      .swiper-pagination-bullet-active{
-        background-color: #fff;
-      }
-      .swiper-pagination-bullet{
-        width: 80px;
-        border-radius: 0;
-        height: 3px;
-      }
-      
-      .autoplay-progress {
-        position: absolute;
-        right: 16px;
-        bottom: 16px;
-        z-index: 10;
-        width: 48px;
-        height: 48px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 300;
-        color: #fff;
-      }
-      
-      .autoplay-progress svg {
-        --progress: 0;
-        position: absolute;
-        left: 0;
-        top: 0px;
-        z-index: 10;
-        width: 100%;
-        height: 100%;
-        stroke-width: 2px;
-        stroke: #fff;
-        fill: none;
-        stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
-        stroke-dasharray: 125.6;
-        transform: rotate(-90deg);
-      }
-      
-      @media (max-width: 768px) {
-        .autoplay-progress{
-          bottom: 35px;
-        }
-      }
-      /* swiper 끝 */
+/* swiper */
+.swiper {
+  width: 100%;
+  height: 100vh;
+}
+.swiper-slide01 {
+  background-color: #a7a7a7;
+}
+.swiper-slide02 {
+  background-color: #828282;
+}
+.swiper-slide03 {
+  background-color: #5b5b5b;
+}
+.swiper-slide .s__container{
+  height: 100%;
+}
+.swiper-slide .s__row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.swiper-button-prev:after, .swiper-button-next:after{
+  content: '';
+  width: 40px;
+  height: 40px;
+}
+.swiper-button-prev:after{
+  background: url(/icon_left_arrow_w.svg) no-repeat;
+  background-size: contain;
+}
+.swiper-button-next:after{
+  background: url(/icon_right_arrow_w.svg) no-repeat;
+  background-size: contain;
+}
+.autoplay-play-stop{
+  cursor: pointer;
+  position: absolute;
+  bottom: 4px;
+  z-index: 10;
+  width: 24px;
+  left: calc(50% + 140px);
+}
+.autoplay-play-stop .autoplay-play{
+  display: none;
+}
+.autoplay-play-stop.stop .autoplay-play{
+  display: block;
+}
+.autoplay-play-stop.stop .autoplay-stop{
+  display: none;
+}
+.swiper-pagination-bullet-active{
+  background-color: #fff;
+}
+.swiper-pagination-bullet{
+  width: 80px;
+  border-radius: 0;
+  height: 3px;
+}
+
+.autoplay-progress {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 300;
+  color: #fff;
+}
+
+.autoplay-progress svg {
+  --progress: 0;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  stroke-width: 2px;
+  stroke: #fff;
+  fill: none;
+  stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+  stroke-dasharray: 125.6;
+  transform: rotate(-90deg);
+}
+
+@media (max-width: 768px) {
+  .autoplay-progress{
+    bottom: 35px;
+  }
+}
+/* swiper 끝 */
       `,
       js: () => {
         const progressCircle = document.querySelector(".autoplay-progress svg");
@@ -308,7 +308,7 @@ export default function page(props) {
           }
         });
       },
-      download: [{ name: "file01", link: "link01" }],
+      download: [{ name: "Swiper", link: "/download/swiper.zip" }],
     },
     {
       title: "Swiper03",
@@ -561,7 +561,7 @@ export default function page(props) {
           }
         });
       },
-      download: [{ name: "file01", link: "link01" }],
+      download: [{ name: "Swiper", link: "/download/swiper.zip" }],
     },
     {
       title: "Swiper04",
@@ -716,7 +716,7 @@ export default function page(props) {
           },
         });
       },
-      download: [{ name: "file01", link: "link01" }],
+      download: [{ name: "Swiper", link: "/download/swiper.zip" }],
     },
   ];
 

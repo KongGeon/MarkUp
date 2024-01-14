@@ -14,6 +14,12 @@ export default function ContentsWrap(props) {
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
+  `;
+  const SubTitle = styled.p`
+    color: var(--gray);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
     margin-bottom: 16px;
   `;
   const Body = styled.div`
@@ -47,6 +53,9 @@ export default function ContentsWrap(props) {
         ))}
       </TabImgWrap>
       <Title>{props.data[thisPage].title}</Title>
+      {props.data[thisPage].subTitle && (
+        <SubTitle>{props.data[thisPage].subTitle}</SubTitle>
+      )}
       <Contents
         contentsCssFile={props.data[thisPage].cssFile}
         contentsJsFile={props.data[thisPage].jsFile}

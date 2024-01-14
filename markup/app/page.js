@@ -25,21 +25,21 @@ const ReadMeListWrap = styled.ul`
   }
 `;
 const ReadMeList = styled.li`
-margin-bottom: 4px;
-font-size: 15px;
-color: var(--black);
-list-style-type: disc;
-margin-left: 20px;
+  margin-bottom: 4px;
+  font-size: 15px;
+  color: var(--black);
+  list-style-type: disc;
+  margin-left: 20px;
   & strong {
     font-weight: 700;
   }
 `;
 const ReadMeList2 = styled.li`
-margin-bottom: 4px;
-font-size: 15px;
-color: var(--black);
-list-style-type: auto;
-margin-left: 20px;
+  margin-bottom: 4px;
+  font-size: 15px;
+  color: var(--black);
+  list-style-type: auto;
+  margin-left: 20px;
   & strong {
     font-weight: 700;
   }
@@ -63,20 +63,18 @@ export default function Home() {
       <Title>README</Title>
       <SubTitle>특징</SubTitle>
       <ReadMeListWrap>
-      <ReadMeList>
-          <strong>웹표준, 웹접근성 :</strong> 웹표준과 웹접근성에 맞는 마크업파일을 제공합니다.(a태그의 src는 비워뒀습니다.)
+        <ReadMeList>
+          <strong>웹표준, 웹접근성 :</strong> 웹표준과 웹접근성에 맞는
+          마크업파일을 제공합니다.(a태그의 src는 비워뒀습니다. 채워주세요!)
         </ReadMeList>
         <ReadMeList>
           <strong>빠른 마크업 :</strong> 기초적인 마크업을 빠르게 생성할 수
           있도록 도와줍니다.
         </ReadMeList>
         <ReadMeList>
-          <strong>라이브러리 의존성 최소화 :</strong> 바닐라 JavaScript로
-          개발되어 라이브러리 의존성을 최소화했습니다.
-        </ReadMeList>
-        <ReadMeList>
-          <strong>다양한 라이브러리 지원 :</strong> 필요에 따라 Swiper, Chart
-          등과 같은 라이브러리를 사용할 수 있습니다.
+          <strong>라이브러리 의존성 최소화 :</strong> 대부분 바닐라 JavaScript로
+          개발되어 라이브러리 의존성을 최소화했습니다.(단, Swiper, Chart,
+          datepick는 외부라이브러리 사용했습니다.)
         </ReadMeList>
       </ReadMeListWrap>
       <SubTitle>사용법</SubTitle>
@@ -87,17 +85,19 @@ export default function Home() {
           필요한 라이브러리가 있다면, 다운로드 버튼을 클릭하거나 해당 라이브러리
           공식홈페이지를 이용해 첨부합니다.
         </ReadMeList2>
-        <ReadMeList2>최상단의 디바이스 크기 조절 버튼을 이용해 preview를 확인해보세요 :)</ReadMeList2>
+        <ReadMeList2>
+          최상단의 디바이스 크기 조절 버튼을 이용해 preview를 확인해보세요 :)
+        </ReadMeList2>
       </ReadMeListWrap>
       <SubTitle>공통 코드 다운로드</SubTitle>
-      <DownBtn href="" download>
+      <DownBtn href="/download/markup.zip" download>
         다운로드
       </DownBtn>
       <SubTitle>업데이트 및 기여</SubTitle>
       <ReadMeListWrap>
         <ReadMeList>
-          새로운 코드 제안은 언제든 환영합니다!
-          업데이트를 원하는 완성된 코드를 보내주시면 정리해서 작성자 아이디와 함께 업데이트합니다.
+          새로운 코드 제안은 언제든 환영합니다! 업데이트를 원하는 완성된 코드를
+          보내주시면 정리해서 작성자 아이디와 함께 업데이트합니다.
         </ReadMeList>
         <ReadMeList>
           업데이트 내역 및 버그 제보는 yangsk0526@gmail.com으로 보내주세요.😊
@@ -105,7 +105,10 @@ export default function Home() {
       </ReadMeListWrap>
       <SubTitle>기타</SubTitle>
       <ReadMeListWrap>
-        <ReadMeList>마크업 작업 특성상 본 'MARKUP' 페이지는 반응형으로 제작되지 않았습니다.</ReadMeList>
+        <ReadMeList>
+          마크업 작업 특성상 본 'MARKUP' 페이지는 반응형으로 제작되지
+          않았습니다.
+        </ReadMeList>
       </ReadMeListWrap>
       {/* <SubTitle>도움을 주신 분</SubTitle>
       <ReadMeListWrap>

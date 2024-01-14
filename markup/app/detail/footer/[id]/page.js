@@ -2,7 +2,6 @@
 
 import ContentsWrap from "@/app/components/ContentsWrap";
 export default function page(props) {
-
   const data = [
     {
       title: "Footer01",
@@ -11,7 +10,7 @@ export default function page(props) {
       <footer>
       <div class="s__container">
           <div class="s__row">
-              <img class="footer__logo" src="/img_footer_logo.svg" alt="logo">
+              <img class="footer__logo" src="/icon_footer_logo.svg" alt="logo">
               <ul class="footer__link-list">
                   <li><a href="#">이용약관</a></li>
                   <li><a href="#">개인정보처리방침</a></li>
@@ -144,55 +143,48 @@ footer .s__row {
   }
 }
       `,
-      js: () => {
-
-},
-      download: [
-        { name: "file01", link: "link01" },
-      ],
+      js: () => {},
     },
     {
       title: "Footer02",
       img: "category/img_footer02.svg",
       html: `
-      <footer>
-      <div class="s__container">
-          <div class="s__row">
-              <ul class="footer__link-list">
-                  <li><a href="#">이용약관</a></li>
-                  <li><a href="#">개인정보처리방침</a></li>
-              </ul>
-              <ul class="footer__info-list">
-                  <li>상호명: 가나다</li>
-                  <li>대표이사: 홍길동</li>
-                  <li>개인정보책임자: 홍길동</li>
-                  <li>사업자등록번호: 123-12-12345</li>
-                  <li>주소: 블라블라</li>
-                  <li>전화번호: 02-1234-1234</li>
-                  <li>FAX: 02-1234-1234</li>
-              </ul>
-              <div class="footet__link-icon-list">
-                  <a href="#" title="유튜브">
-                      <img src="/icon_youtube_w.svg" alt="유튜브">
-                  </a>
-                  <a href="#" title="인스타그램">
-                      <img src="/icon_instar_w.svg" alt="인스타그램">
-                  </a>
-                  <a href="#" title="카카오톡">
-                      <img src="/icon_kakao_w.svg" alt="카카오톡">
-                  </a>
-                  <a href="#" title="블로그">
-                      <img src="/icon_blog_w.svg" alt="블로그">
-                  </a>
-              </div>
-              <p class="footer__copy">COPYRIGHT@2023 BRAND.ALL RIGHTS RESERVED.</p>
+<footer>
+  <div class="s__container">
+      <div class="s__row">
+          <ul class="footer__link-list">
+              <li><a href="#">이용약관</a></li>
+              <li><a href="#">개인정보처리방침</a></li>
+          </ul>
+          <ul class="footer__info-list">
+              <li>상호명: 가나다</li>
+              <li>대표이사: 홍길동</li>
+              <li>개인정보책임자: 홍길동</li>
+              <li>사업자등록번호: 123-12-12345</li>
+              <li>주소: 블라블라</li>
+              <li>전화번호: 02-1234-1234</li>
+              <li>FAX: 02-1234-1234</li>
+          </ul>
+          <div class="footet__link-icon-list">
+              <a href="#" title="유튜브">
+                  <img src="/icon_youtube_w.svg" alt="유튜브">
+              </a>
+              <a href="#" title="인스타그램">
+                  <img src="/icon_instar_w.svg" alt="인스타그램">
+              </a>
+              <a href="#" title="카카오톡">
+                  <img src="/icon_kakao_w.svg" alt="카카오톡">
+              </a>
+              <a href="#" title="블로그">
+                  <img src="/icon_blog_w.svg" alt="블로그">
+              </a>
           </div>
+          <p class="footer__copy">COPYRIGHT@2023 BRAND.ALL RIGHTS RESERVED.</p>
       </div>
-
-  </footer>
+  </div>
+</footer>
       `,
       css: `
-      
 footer {
   background-color: var(--footer-bg);
   padding: 36px 0;
@@ -282,12 +274,7 @@ footer .s__row {
 }
 
       `,
-      js: () => {
-
-},
-      download: [
-        { name: "file01", link: "link01" },
-      ],
+      js: () => {},
     },
   ];
 

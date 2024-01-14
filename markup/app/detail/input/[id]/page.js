@@ -21,7 +21,6 @@ export default function page(props) {
       `,
       css: ``,
       js: () => {},
-      download: [{ name: "file01", link: "link01" }],
     },
   ];
 

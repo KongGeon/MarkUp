@@ -75,7 +75,6 @@ export default function page(props) {
           });
         }
       },
-      download: [{ name: "file01", link: "link01" }],
     },
     {
       title: "File02",
@@ -278,7 +277,6 @@ export default function page(props) {
           });
         }
       },
-      download: [{ name: "file01", link: "link01" }],
     },
   ];
 

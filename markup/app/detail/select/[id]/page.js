@@ -9,23 +9,15 @@ export default function page(props) {
       jsFile: [],
       img: "category/img_select01.svg",
       html: `
-<section>
-  <div class="s__container">
-    <div class="s__row">
-      <select name="" id="" class="s__select">
-      <option value="" disabled>선택안됨</option>
-      <option value="" label="이걸로대체됨">옵션</option>
-      <option value="" selected>처음에선택됨</option>
-      <option value="">옵션</option>
-      </select>
-    </div>
-  </div>
-</section>
+<select name="" id="" class="s__select">
+  <option value="1" disabled>disabled</option>
+  <option value="2" label="label">data</option>
+  <option value="3" selected>selected</option>
+  <option value="4">data</option>
+</select>
       `,
-      css: `
-      `,
+      css: ``,
       js: () => {},
-      download: [{ name: "file01", link: "link01" }],
     },
     {
       title: "Select02",
@@ -49,11 +41,11 @@ export default function page(props) {
 </section>
       `,
       css: `
-      .phone-wrap {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 8px;
-      }
+.phone-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+}
       `,
       js: () => {
         //input 숫자 최대 개수
@@ -68,7 +60,6 @@ export default function page(props) {
           });
         }
       },
-      download: [{ name: "file01", link: "link01" }],
     },
   ];
 

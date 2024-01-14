@@ -255,7 +255,6 @@ export default function page(props) {
           });
         });
       },
-      download: [{ name: "file01", link: "link01" }],
     },
     {
       title: "Modal02",
@@ -511,7 +510,6 @@ export default function page(props) {
           });
         });
       },
-      download: [{ name: "file01", link: "link01" }],
     },
     {
       title: "Modal03",
@@ -791,7 +789,7 @@ export default function page(props) {
         toggleMainPopup();
         // });
       },
-      download: [{ name: "file01", link: "link01" }],
+      download: [{ name: "Modal03", link: "/download/modal03.zip" }],
     },
   ];
 

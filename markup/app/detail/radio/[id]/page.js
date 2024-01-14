@@ -9,21 +9,21 @@ export default function page(props) {
       jsFile: [],
       img: "category/img_radio01.svg",
       html: `
-      <div class="s__radio-wrap">
-      <div class="s__radio">
-          <input type="radio" class="" name="ra01" id="ra01_01" hidden checked>
-          <label for="ra01_01"></label>
-          <label for="ra01_01">radio</label>
-      </div>
-      <div class="s__radio">
-          <input type="radio" class="" name="ra01" id="ra01_02" hidden>
-          <label for="ra01_02"></label>
-          <label for="ra01_02">radio</label>
-      </div>
+<div class="s__radio-wrap">
+  <div class="s__radio">
+      <input type="radio" class="" name="ra01" id="ra01_01" hidden checked>
+      <label for="ra01_01"></label>
+      <label for="ra01_01">radio</label>
   </div>
+  <div class="s__radio">
+      <input type="radio" class="" name="ra01" id="ra01_02" hidden>
+      <label for="ra01_02"></label>
+      <label for="ra01_02">radio</label>
+  </div>
+</div>
       `,
       css: `
-      .s__checkbox-wrap,
+.s__checkbox-wrap,
 .s__radio-wrap {
   display: flex;
   align-items: center;
@@ -65,7 +65,6 @@ export default function page(props) {
 }
       `,
       js: () => {},
-      download: [{ name: "file01", link: "link01" }],
     },
   ];
 

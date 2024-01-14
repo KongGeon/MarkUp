@@ -21,7 +21,7 @@ export default function page(props) {
                       <li><a href="#"><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus dolorem hic explicabo vel rem non at id. Suscipit delectus, quisquam est sed cumque architecto doloremque asperiores nostrum quas quo et.</span><span>2023.01.01</span></a></li>
                       <li><a href="#"><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repel  </span><span>2023.01.01</span></a></li>
                   </ul>
-                  <a class="board01__more-btn" href="#">더보기<img src="/icon_plus.svg" alt="더보기"></a>
+                  <a class="board01__more-btn" href="#">more<img src="/icon_plus.svg" alt="더보기"></a>
               </div>
               <div class="board01__list">
                   <p class="board01__title">title</p>
@@ -32,7 +32,7 @@ export default function page(props) {
                       <li><a href="#"><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus dolorem hic explicabo vel rem non at id. Suscipit delectus, quisquam est sed cumque architecto doloremque asperiores nostrum quas quo et.</span><span>2023.01.01</span></a></li>
                       <li><a href="#"><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus dolorem hic explicabo vel rem non at id. Suscipit delectus, quisquam est sed cumque architecto doloremque asperiores nostrum quas quo et.</span><span>2023.01.01</span></a></li>
                   </ul>
-                  <a class="board01__more-btn" href="#">더보기<img src="/icon_plus.svg" alt="더보기"></a>
+                  <a class="board01__more-btn" href="#">more<img src="/icon_plus.svg" alt="더보기"></a>
               </div>
           </div>
       </div>
@@ -124,10 +124,10 @@ export default function page(props) {
 
       `,
       js: () => {},
-      download: [{ name: "file01", link: "link01" }],
     },
     {
       title: "Board02",
+      subTitle: "더 자세한 정보는 TUI GRID 공식사이트를 참고해주세요.",
       cssFile: [
         "css/tui-pagination.css",
         "css/tui-grid.css",
@@ -144,8 +144,7 @@ export default function page(props) {
       </div>
     </section>
       `,
-      css: `
-      `,
+      css: ``,
       js: () => {
         // 도움말
         //https://github.com/nhn/tui.grid/blob/master/packages/toast-ui.grid/docs/ko/README.md
@@ -314,7 +313,7 @@ export default function page(props) {
           console.log("uncheck", ev);
         });
       },
-      download: [{ name: "file01", link: "link01" }],
+      download: [{ name: "board02", link: "/download/board02.zip" }],
     },
   ];
 

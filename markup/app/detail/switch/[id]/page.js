@@ -9,15 +9,15 @@ export default function page(props) {
       jsFile: [],
       img: "category/img_switch01.svg",
       html: `
-      <div class="s__switch">
-      <input type="checkbox" id="toggle" hidden>
-      <label for="toggle" class="toggleSwitch">
-          <span class="toggleButton"></span>
-      </label>
-  </div>
+<div class="s__switch">
+    <input type="checkbox" id="toggle" hidden>
+    <label for="toggle" class="toggleSwitch">
+        <span class="toggleButton"></span>
+    </label>
+</div>
       `,
       css: `
-      /* 토글스위치 */
+/* 토글스위치 */
 .toggleSwitch {
     width: 46px;
     height: 24px;
@@ -54,7 +54,6 @@ export default function page(props) {
   }
       `,
       js: () => {},
-      download: [{ name: "file01", link: "link01" }],
     },
   ];
 

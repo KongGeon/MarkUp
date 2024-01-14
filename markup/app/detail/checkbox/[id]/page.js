@@ -60,7 +60,6 @@ export default function page(props) {
 }
       `,
       js: () => {},
-      download: [{ name: "file01", link: "link01" }],
     },
     {
       title: "Checkbox02",
@@ -173,7 +172,6 @@ export default function page(props) {
           ck.addEventListener("click", handlerAgrCheck);
         });
       },
-      download: [{ name: "file01", link: "link01" }],
     },
   ];
 

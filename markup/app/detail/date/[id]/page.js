@@ -5,6 +5,8 @@ export default function page(props) {
   const data = [
     {
       title: "Date01",
+      subTitle:
+        "해당 페이지에서는 버그로 간혹 표현이 안됩니다. 다만 가져가서 사용하시면 잘 나옵니다!",
       cssFile: ["css/daterangepicker.css"],
       jsFile: [
         "js/jquery.min.js",
@@ -24,7 +26,7 @@ export default function page(props) {
 </section>
       `,
       css: `
-      /* 데이트피커 */
+/* 데이트피커 */
 .s__date, .s__date-range{
     background: url(/icon_date.svg) no-repeat 97% 50%/18px auto;
 }
@@ -32,6 +34,8 @@ export default function page(props) {
       js: () => {
         // 데이트피커
         // https://www.daterangepicker.com/#config
+
+        //적용시 js순서를 잘 지켜주세요! jquery > moment > daterangepicker 순서입니다!
 
         // 싱글 데이트피커
         $(".s__date").daterangepicker(
@@ -79,10 +83,12 @@ export default function page(props) {
           }
         );
       },
-      download: [{ name: "file01", link: "link01" }],
+      download: [{ name: "Date", link: "/download/date.zip" }],
     },
     {
       title: "Date02",
+      subTitle:
+        "해당 페이지에서는 버그로 간혹 표현이 안됩니다. 다만 가져가서 사용하시면 잘 나옵니다!",
       cssFile: ["css/daterangepicker.css"],
       jsFile: [
         "js/jquery.min.js",
@@ -102,15 +108,17 @@ export default function page(props) {
 </section>
       `,
       css: `
-      /* 데이트피커 */
-      .s__date, .s__date-range{
-          background: url(/icon_date.svg) no-repeat 97% 50%/18px auto;
-      }
+/* 데이트피커 */
+.s__date, .s__date-range{
+    background: url(/icon_date.svg) no-repeat 97% 50%/18px auto;
+}
 
       `,
       js: () => {
         // 데이트피커
         // https://www.daterangepicker.com/#config
+
+        //적용시 js순서를 잘 지켜주세요! jquery > moment > daterangepicker 순서입니다!
 
         // 멀티 데이트피커
         $(".s__date-range").daterangepicker(
@@ -157,7 +165,7 @@ export default function page(props) {
           }
         );
       },
-      download: [{ name: "file01", link: "link01" }],
+      download: [{ name: "Date", link: "/download/date.zip" }],
     },
   ];
 
