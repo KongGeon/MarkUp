@@ -1,141 +1,142 @@
 /* reset */
 
 * {
-    margin: 0;
-    padding: 0;
-    font: inherit;
-    color: inherit;
-  }
-  *,
-  :after,
-  :before {
-    box-sizing: border-box;
-    flex-shrink: 0;
-  }
-  :root {
-    -webkit-tap-highlight-color: transparent;
-    -webkit-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-    cursor: default;
-    line-height: 1.5;
-    overflow-wrap: break-word;
-    word-break: break-word;
-    tab-size: 4;
-  }
-  html,
-  body {
-    height: 100%;
-  }
-  img,
-  picture,
-  video,
-  canvas,
-  svg {
-    display: block;
-    max-width: 100%;
-  }
-  iframe{
-    border: 0;
-  }
-  button {
-    background: none;
-    border: 0;
-    cursor: pointer;
-  }
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-  table {
-    border-collapse: collapse;
-    border-spacing: 0;
-  }
-  ul,
-  ol {
-    list-style: none;
-  }
-  
-  /* 추가 */
-  *::-webkit-scrollbar {
-    width: 12px;
-    height: 12px;
-  }
-  
-  *::-webkit-scrollbar-thumb {
-    background-color: #585e8a4c;
-    border-radius: 10px;
-    background-clip: padding-box;
-    border: 2px solid transparent;
-  }
-  :root {
-    --black: #181818;
-    --boarder: #E6E8EC;
-    --gray: #BABABA;
-    --background: "#F5F5F6";
-    --main: "#3559E0";
-  }
-  .s__container {
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-  }
-  .s__row {
-    padding: 0 16px;
-  }
-  /* reset */
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+}
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+:root {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  cursor: default;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  tab-size: 4;
+}
+html,
+body {
+  height: 100%;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+iframe {
+  border: 0;
+}
+button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+ul,
+ol {
+  list-style: none;
+}
 
-  /* 홈 */
-  .m_container{
-    width: 100%;
-    max-width: 1532px;
-    margin: 0 auto;
-  }
-  .m_row{
-    padding: 0 16px;
-    position: relative;
-    display: flex;
-    gap: 16px;
-  }
-  /* prism */
-  div.code-toolbar > .toolbar > .toolbar-item{
-    margin-left: 4px;
-  }
-  div.code-toolbar > .toolbar > .toolbar-item > a, div.code-toolbar > .toolbar > .toolbar-item > button, div.code-toolbar > .toolbar > .toolbar-item > span{
-    padding: 4px 8px !important;
-    cursor: pointer !important;
-    font-size: 14px !important;
-    line-height: 14px !important;
-    height: 26px;
-  }
-  .Code{
-    max-height: 500px;
-    overflow: auto;
-  }
-  /* 디바이스버튼 */
-  .size-pc + .m_container .components-html-wrap {
-    max-width: 2000px;
-  }
-  .size-tablet + .m_container .components-html-wrap {
-    max-width: 900px;
+/* 추가 */
+*::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
 
-  }
-  .size-mobile + .m_container .components-html-wrap {
-    max-width: 390px;
+*::-webkit-scrollbar-thumb {
+  background-color: #585e8a4c;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+:root {
+  --black: #181818;
+  --boarder: #e6e8ec;
+  --gray: #bababa;
+  --background: "#F5F5F6";
+  --main: "#3559E0";
+}
+.s__container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+.s__row {
+  padding: 0 16px;
+}
+/* reset */
 
-  }
-  /* footer */
-  footer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-top: 1px solid var(--boarder);
-    margin-top: 80px;
-    padding: 16px;
-    font-size: 14px;
-    color: var(--gray);
-  }
-  /* 폰트 */
-  /* Pretendard */
+/* 홈 */
+.m_container {
+  width: 100%;
+  max-width: 1532px;
+  margin: 0 auto;
+  min-height: calc(100vh - 200px);
+}
+.m_row {
+  padding: 0 16px;
+  position: relative;
+  display: flex;
+  gap: 16px;
+}
+/* prism */
+div.code-toolbar > .toolbar > .toolbar-item {
+  margin-left: 4px;
+}
+div.code-toolbar > .toolbar > .toolbar-item > a,
+div.code-toolbar > .toolbar > .toolbar-item > button,
+div.code-toolbar > .toolbar > .toolbar-item > span {
+  padding: 4px 8px !important;
+  cursor: pointer !important;
+  font-size: 14px !important;
+  line-height: 14px !important;
+  height: 26px;
+}
+.Code {
+  max-height: 500px;
+  overflow: auto;
+}
+/* 디바이스버튼 */
+.size-pc + .m_container .components-html-wrap {
+  max-width: 2000px;
+}
+.size-tablet + .m_container .components-html-wrap {
+  max-width: 900px;
+}
+.size-mobile + .m_container .components-html-wrap {
+  max-width: 390px;
+}
+/* footer */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid var(--boarder);
+  margin-top: 80px;
+  padding: 16px;
+  font-size: 14px;
+  color: var(--gray);
+}
+/* 폰트 */
+/* Pretendard */
 @font-face {
   font-family: "Pretendard";
   font-weight: 900;
@@ -217,22 +218,24 @@
     url("/fonts/woff/Pretendard-Thin.woff") format("woff");
 }
 
-
-  @font-face {
-    font-family: 'GmarketSansLight';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
 @font-face {
-  font-family: 'GmarketSansMedium';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-family: "GmarketSansLight";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'GmarketSansBold';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
